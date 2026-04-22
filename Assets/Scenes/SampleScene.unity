@@ -1240,12 +1240,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756b6b4446a80ba418b631dc86f3429b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  player_input: {fileID: 1684455479}
+  player_ability:
+    m_Name: Player_ability
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d067ee91-bf32-4181-8d98-80ff7e7f3125
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   main_camera: {fileID: 0}
   free_cam: {fileID: 176351401}
   base_speed: 100
   player_rb: {fileID: 1684455480}
   SlimeMembrane: {fileID: 0}
   SlimeCore: {fileID: 979378627}
+  module_type: 0
 --- !u!114 &1684455479
 MonoBehaviour:
   m_ObjectHideFlags: 0

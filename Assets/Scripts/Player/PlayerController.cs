@@ -6,6 +6,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    // Input System
+    public PlayerInput player_input;
+    public InputAction player_ability;
+    
     // Camera Control
     public Camera main_camera;
     public CinemachineCamera free_cam;
@@ -28,12 +32,23 @@ public class PlayerController : MonoBehaviour
     public GameObject SlimeMembrane;
     public GameObject SlimeCore;
 
+    // Player Module
+    public PlayerModuleType module_type;
+
     void Awake()
     {
         // get local components if they don't exist
-        if (!player_rb)
-        {
-            player_rb = GetComponent<Rigidbody>();
+        if (!player_rb) {player_rb = GetComponent<Rigidbody>();}
+
+        // set player input stuff
+        if (!player_input) {player_input = GetComponent<PlayerInput>();}
+        player_ability = player_input.actions["Ability"];
+
+        // set player ability module
+        switch (module_type) {
+            case PlayerModuleType.JUMP:
+                PlayerModule new_module = new JumpModule(this);
+                break;
         }
     }
     
@@ -48,6 +63,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // move player to face camera direction
         Vector3 cam_xz_pos = new Vector3(free_cam.transform.position.x, transform.position.y, free_cam.transform.position.z);
         cam_look_dir = (transform.position - cam_xz_pos).normalized;
 
@@ -56,8 +72,6 @@ public class PlayerController : MonoBehaviour
             Vector3 rotate_to_dir = forward_accel * cam_look_dir + sideways_accel * (Quaternion.Euler(0,90,0) * cam_look_dir).normalized;
             true_look_dir = Vector3.Slerp(true_look_dir, rotate_to_dir, Time.deltaTime * body_rotate_speed);
         }
-        Debug.DrawLine(transform.position, transform.position + true_look_dir * 2);
-
         SlimeCore.transform.forward = true_look_dir;
     }
 
@@ -72,4 +86,19 @@ public class PlayerController : MonoBehaviour
         forward_accel = move_dir.y * base_speed;
         sideways_accel = move_dir.x * base_speed;
     }
+
+    void OnAbility(InputValue action)
+    {
+        
+    }
+
+    #region Physics
+    // This is called automatically when a collision begins
+    private void OnCollisionEnter(Collision collision)
+    {
+        // collision.gameObject gives access to the object you hit
+        Debug.Log("Collided with: " + collision.gameObject.tag);
+    }
+
+    #endregion
 }
