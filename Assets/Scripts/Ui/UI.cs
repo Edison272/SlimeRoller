@@ -13,8 +13,8 @@ public class UI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        EventBus.Singleton.PlayerDeath += () => coins += 1;
-        EventBus.Singleton.CoinCollect += () => deaths += 1;
+        EventBus.Singleton.PlayerDeath += () => deaths += 1;
+        EventBus.Singleton.CoinCollect += () => coins += 1;
     }
 
     // Update is called once per frame
