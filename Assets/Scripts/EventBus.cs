@@ -17,4 +17,5 @@ public class EventBus
     
     public Action PlayerDeath;
     public Action LevelComplete;
+    public Action CoinCollect;
 }
