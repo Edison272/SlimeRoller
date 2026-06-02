@@ -3348,6 +3348,7 @@ GameObject:
   - component: {fileID: 821897954}
   - component: {fileID: 821897953}
   - component: {fileID: 821897957}
+  - component: {fileID: 821897958}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3455,6 +3456,19 @@ MonoBehaviour:
   coins: 0
   death_text: {fileID: 1244299013}
   coin_text: {fileID: 1933236669}
+--- !u!114 &821897958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821897952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3921350adbd916e4bb167af749431dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIController
+  <MainCanvas>k__BackingField: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -11102,6 +11116,7 @@ MonoBehaviour:
   AllVFX:
   - {fileID: 979378627}
   module_type: 0
+  module_so: {fileID: 11400000, guid: ef69d58b5c5950040aecef367c3bbd85, type: 2}
 --- !u!114 &1684455479
 MonoBehaviour:
   m_ObjectHideFlags: 0

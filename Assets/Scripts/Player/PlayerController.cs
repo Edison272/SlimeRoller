@@ -44,9 +44,11 @@ public class PlayerController : MonoBehaviour
     // Player Module
     public PlayerModuleType module_type;
     public PlayerModule active_module;
+    public PlayerModuleSO module_so;
 
     // Player States - accessed by external scripts
     public bool on_ground {get; private set;} = false;
+
 
 
     void Awake()
@@ -60,12 +62,16 @@ public class PlayerController : MonoBehaviour
 
         // set player ability starting module
         PlayerModule new_module = null;
-        switch (module_type) {
-            case PlayerModuleType.JUMP:
-                new_module = new JumpModule(this);
-                break;
+        if (UIController.Instance)
+        {
+            new_module = module_so.CreateModuleData(this, UIController.Instance.MainCanvas.gameObject);
+        }
+        else
+        {
+            new_module = module_so.CreateModuleData(this);
         }
         active_module = new_module;
+
         curr_speed = base_speed;
 
         true_look_dir = SlimeCore.transform.forward;

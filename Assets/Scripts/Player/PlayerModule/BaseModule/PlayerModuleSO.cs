@@ -8,5 +8,16 @@ The ability's UI, pickups, and other stuff.
 */
 public abstract class PlayerModuleSO : ScriptableObject
 {
-    
+    // UI element
+    public GameObject ui_element;
+
+    // create module class instance, 
+    public abstract PlayerModule CreateModuleData(
+        PlayerController player, 
+        GameObject ui_holder // this would be some object within the canvas
+    );
+
+    public abstract PlayerModule CreateModuleData(
+        PlayerController player
+    );
 }

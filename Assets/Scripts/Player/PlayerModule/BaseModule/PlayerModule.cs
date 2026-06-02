@@ -6,7 +6,11 @@ public enum PlayerModuleType {JUMP}
 public abstract class PlayerModule
 {
     protected PlayerController player;
-    public PlayerModule(PlayerController player)
+
+    // get player and ui instance from the scripta
+    public PlayerModule(
+        PlayerController player, 
+        PlayerModuleSO base_data)
     {
         this.player = player;
     }
