@@ -10,6 +10,7 @@ public abstract class PlayerModule
     {
         this.player = player;
     }
+    public abstract void FixedUpdateModule();
     public abstract void UpdateModule();
 
     public abstract void UseModule(InputAction.CallbackContext context);

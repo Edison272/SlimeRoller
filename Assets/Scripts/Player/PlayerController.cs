@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
 
     // Player Module
     public PlayerModuleType module_type;
+    public PlayerModule active_module;
 
     void Awake()
     {
@@ -52,12 +53,14 @@ public class PlayerController : MonoBehaviour
         if (!player_input) {player_input = GetComponent<PlayerInput>();}
         player_ability = player_input.actions["Ability"];
 
-        // set player ability module
+        // set player ability starting module
+        PlayerModule new_module = null;
         switch (module_type) {
             case PlayerModuleType.JUMP:
-                PlayerModule new_module = new JumpModule(this);
+                new_module = new JumpModule(this);
                 break;
         }
+        active_module = new_module;
         curr_speed = base_speed;
 
         true_look_dir = SlimeCore.transform.forward;
@@ -86,10 +89,13 @@ public class PlayerController : MonoBehaviour
             true_look_dir = Vector3.Slerp(true_look_dir, rotate_to_dir, Time.deltaTime * body_rotate_speed);
         }
         //SlimeCore.transform.forward = true_look_dir;
+
+        active_module.UpdateModule();
     }
 
     void FixedUpdate()
     {
+        // constantly set the player's movement based on the accel values
         player_rb.AddForce(cam_look_dir * forward_accel + sideways_accel * (Quaternion.Euler(0,90,0) * cam_look_dir).normalized);
     
         // check if player has fallen off the map
@@ -97,8 +103,11 @@ public class PlayerController : MonoBehaviour
         {
             OnDeath();
         }
+
+        active_module.FixedUpdateModule();
     }
 
+    // update the accel values on input
     void OnMove(InputValue action)
     {
         if (player_state != PlayerState.Dead)
@@ -111,7 +120,7 @@ public class PlayerController : MonoBehaviour
 
     void OnAbility(InputValue action)
     {
-        
+        //active_module.UseModule(action);
     }
     // hide anypart of the player which is visible
     void ToggleVFX(bool is_on)
@@ -161,6 +170,13 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Physics
+    // used to add physics impulse forces to the player from the ability modules
+    public void ApplyImpulse(Vector2 direction, float power)
+    {
+        player_rb.AddForce(direction * power, ForceMode.Impulse);
+
+    }
+
     // This is called automatically when a collision begins
     private void OnCollisionEnter(Collision collision)
     {
