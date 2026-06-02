@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float base_speed = 10;
     [SerializeField] float curr_speed;
     public PlayerState player_state = PlayerState.OnGround;
+    private LayerMask ground_check_mask = 1 << 6;
 
     // Looking values
     Vector3 cam_look_dir = Vector3.zero;
@@ -44,6 +45,10 @@ public class PlayerController : MonoBehaviour
     public PlayerModuleType module_type;
     public PlayerModule active_module;
 
+    // Player States - accessed by external scripts
+    public bool on_ground {get; private set;} = false;
+
+
     void Awake()
     {
         // get local components if they don't exist
@@ -64,7 +69,6 @@ public class PlayerController : MonoBehaviour
         curr_speed = base_speed;
 
         true_look_dir = SlimeCore.transform.forward;
-        player_state = PlayerState.OnGround;
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -98,13 +102,33 @@ public class PlayerController : MonoBehaviour
         // constantly set the player's movement based on the accel values
         player_rb.AddForce(cam_look_dir * forward_accel + sideways_accel * (Quaternion.Euler(0,90,0) * cam_look_dir).normalized);
     
+        // check if player is on the ground
+        RaycastHit ground_touch;
+        on_ground = Physics.Raycast(
+            transform.position, 
+            Vector3.down,
+            out ground_touch,
+            transform.localScale.y/1.9f,
+            ground_check_mask
+            );
+        if (on_ground)
+        {
+            Debug.DrawLine(transform.position, ground_touch.point, Color.green);
+        } 
+        else
+        {
+            Debug.DrawLine(transform.position, transform.position + Vector3.down * (transform.localScale.y/1.9f), Color.red);
+        }
+
         // check if player has fallen off the map
         if (player_state != PlayerState.Dead && player_rb.position.y < -10)
         {
             OnDeath();
         }
 
+        // update ability if necessary
         active_module.FixedUpdateModule();
+        
     }
 
     // update the accel values on input

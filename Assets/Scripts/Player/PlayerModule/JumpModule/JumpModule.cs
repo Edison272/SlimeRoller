@@ -14,11 +14,16 @@ public class JumpModule : PlayerModule
         // connect relevant inputs
         player.player_ability.canceled += UseModule;
         player.player_ability.started += ChargeModule;
+        // connect other information functions
     }
 
     // update functions are called by the player.
     public override void FixedUpdateModule()
     {
+        if (!player.on_ground)
+        {
+            return;
+        }
         if (charging)
         {
             curr_charge_time = Math.Min(curr_charge_time + Time.deltaTime, max_charge_time);
@@ -38,9 +43,13 @@ public class JumpModule : PlayerModule
     // on release, jump upwards and then reset charge
     public override void UseModule(InputAction.CallbackContext context)
     {
+        if (!player.on_ground)
+        {
+            return;
+        }
         charging = false;
-        Debug.Log(jump_scale * curr_charge_time);
-        player.ApplyImpulse(Vector2.up, base_jump_amt + jump_scale * curr_charge_time);
+        float jump_power = base_jump_amt + jump_scale * curr_charge_time;
+        player.ApplyImpulse(Vector2.up, jump_power);
         curr_charge_time = 0;
     }
 }

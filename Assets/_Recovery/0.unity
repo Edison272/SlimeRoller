@@ -1558,7 +1558,7 @@ GameObject:
   - component: {fileID: 295655071}
   - component: {fileID: 295655070}
   - component: {fileID: 295655069}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Level 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11094,7 +11094,7 @@ MonoBehaviour:
   free_cam: {fileID: 176351401}
   base_speed: 100
   curr_speed: 0
-  player_state: 1
+  player_state: 0
   player_rb: {fileID: 1684455480}
   SlimeMembrane: {fileID: 1684455473}
   SlimeCore: {fileID: 979378627}
