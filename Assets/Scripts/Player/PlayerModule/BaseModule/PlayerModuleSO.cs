@@ -20,4 +20,9 @@ public abstract class PlayerModuleSO : ScriptableObject
     public abstract PlayerModule CreateModuleData(
         PlayerController player
     );
+
+    public abstract void CreateNewUI(
+        PlayerModule player_module,
+        GameObject ui_holder // this would be some object within the canvas
+    );   
 }

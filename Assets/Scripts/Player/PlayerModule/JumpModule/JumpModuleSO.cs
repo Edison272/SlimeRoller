@@ -35,4 +35,14 @@ public class JumpModuleSO : PlayerModuleSO
     {
         return new JumpModule(player, this);
     }
+
+    public override void CreateNewUI(
+        PlayerModule player_module,
+        GameObject ui_holder
+        )
+    {
+        GameObject ui_instance = MonoBehaviour.Instantiate(ui_element, ui_holder.transform);
+        JumpModuleUI module_ui = ui_instance.GetComponent<JumpModuleUI>();
+        module_ui.module_instance = (JumpModule)player_module;
+    }
 }

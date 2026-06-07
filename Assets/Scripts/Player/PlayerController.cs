@@ -60,6 +60,14 @@ public class PlayerController : MonoBehaviour
         if (!player_input) {player_input = GetComponent<PlayerInput>();}
         player_ability = player_input.actions["Ability"];
 
+        curr_speed = base_speed;
+
+        true_look_dir = SlimeCore.transform.forward;
+    }
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
         // set player ability starting module
         PlayerModule new_module = null;
         if (UIController.Instance)
@@ -71,15 +79,7 @@ public class PlayerController : MonoBehaviour
             new_module = module_so.CreateModuleData(this);
         }
         active_module = new_module;
-
-        curr_speed = base_speed;
-
-        true_look_dir = SlimeCore.transform.forward;
-    }
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+        
         // disable default cursor
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
