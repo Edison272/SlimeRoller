@@ -4,6 +4,7 @@ public class LevelPuck : MonoBehaviour
 {
     [SerializeField] private string LevelName;
     [SerializeField] private SceneController sceneController;
+    private bool playerHasEntered = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,10 +17,11 @@ public class LevelPuck : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("thing hit the level puck");
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !playerHasEntered)
         {
             Debug.Log("Player hit the level puck");
             sceneController.LoadLevel(LevelName);
+            playerHasEntered = true;
         }
     }
 }

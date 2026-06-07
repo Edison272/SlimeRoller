@@ -4,9 +4,23 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    public static SceneController Instance { get; private set; }
     [SerializeField] private string HubSceneName = "Hub";
     [SerializeField] private string LoadingSceneName = "LoadingScreen";
     [SerializeField] private float MinLoadingScreenTime = 5f;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     public void LoadLevel(string levelName)
     {
