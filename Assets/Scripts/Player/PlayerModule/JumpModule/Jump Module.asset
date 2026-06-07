@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::JumpModuleSO
   ui_element: {fileID: 4446644189142558269, guid: ed456ea6a56295542a08d62e20837681, type: 3}
   max_charge_time: 2
-  max_jump_scale: 30
-  min_jump_scale: 120
+  jump_scale: 80
+  base_jump_amt: 60

@@ -10,8 +10,8 @@ The ability's UI, pickups, and other stuff.
 public class JumpModuleSO : PlayerModuleSO
 {
     public float max_charge_time = 2;
-    public float max_jump_scale = 60f;
-    public float min_jump_scale = 60f;
+    public float jump_scale = 60;
+    public float base_jump_amt = 60;
 
     // create module class instance, 
     public override PlayerModule CreateModuleData(

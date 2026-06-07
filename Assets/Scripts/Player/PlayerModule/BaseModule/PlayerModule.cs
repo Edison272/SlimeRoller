@@ -18,6 +18,5 @@ public abstract class PlayerModule
     public abstract void UpdateModule();
 
     public abstract void UseModule(InputAction.CallbackContext context);
-    public abstract void ResetModule();
 
 }
