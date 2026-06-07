@@ -82,4 +82,8 @@ public class GravityModule : PlayerModule
         gravityActive = true;
     }
 
+    public override void ResetModule()
+    {
+        gravityActive = false;
+    }
 }
