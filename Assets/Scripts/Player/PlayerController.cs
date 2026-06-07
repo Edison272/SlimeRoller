@@ -175,6 +175,7 @@ public class PlayerController : MonoBehaviour
         player_rb.linearVelocity = Vector3.zero;
         forward_accel = 0;
         sideways_accel = 0;
+        active_module.ResetModule();
 
         //die
         player_state = PlayerState.Dead;

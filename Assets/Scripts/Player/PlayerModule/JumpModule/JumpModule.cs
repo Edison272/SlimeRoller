@@ -53,8 +53,8 @@ public class JumpModule : PlayerModule
             return;
         }
 
-        float jump_scale = base_data.jump_scale * curr_charge_time;
-        float base_jump_amt = base_data.base_jump_amt;
+        float jump_scale = base_data.max_jump_scale * curr_charge_time;
+        float base_jump_amt = base_data.min_jump_scale;
         float jump_power = base_jump_amt + jump_scale;
         player.ApplyImpulse(Vector2.up, jump_power);
         curr_charge_time = 0;
@@ -64,6 +64,11 @@ public class JumpModule : PlayerModule
     public float GetJumpChargePerc()
     {
         return curr_charge_time / base_data.max_charge_time;
+    }
+
+    public override void ResetModule()
+    {
+        curr_charge_time = 0;
     }
     #endregion
 }
