@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8169349582148771070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2410f9cb8da7687438998b4aec60c723, type: 3}
+  m_Script: {fileID: 11500000, guid: 93d11982e8861ba488fbafdae3b89b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Laser
   lineRenderer: {fileID: 1157095768063794622}
@@ -53,7 +53,7 @@ MonoBehaviour:
   OnHitTarget:
     m_PersistentCalls:
       m_Calls: []
-  numBounces: 3
+  numBounces: 0
 --- !u!120 &1157095768063794622
 LineRenderer:
   serializedVersion: 3
@@ -152,7 +152,7 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0

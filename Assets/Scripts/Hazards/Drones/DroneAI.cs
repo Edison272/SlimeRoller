@@ -12,9 +12,12 @@ public class DroneAI : MonoBehaviour
     public Transform eyePoint;
     public Transform player;
     public GameObject laserPrefab;
-    public float timePerAttack = 0.5f;
 
-    private float attackTimer;
+    // manage attack speed
+    [SerializeField] private float attack_speed = 0.5f;
+    [SerializeField] private float attack_time = 0;
+
+    [SerializeField] private BoltShooter drone_shooter;
     private NavMeshAgent agent;
     private int currentWaypoint = 0;
     private float visionDistance;
@@ -84,15 +87,6 @@ public class DroneAI : MonoBehaviour
         return false;
     }
 
-    void Shoot()
-    {
-        // shoot a laser towards the player
-        Vector3 directionToPlayer = player.position - eyePoint.position;
-        Quaternion rotation = Quaternion.LookRotation(directionToPlayer);
-        Instantiate(laserPrefab, eyePoint.position, rotation);
-    }
-
-
     void Patrol()
     {
         // Hover
@@ -132,11 +126,18 @@ public class DroneAI : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
 
-        if (Time.time >= timePerAttack)
+        if (Time.time >= attack_time)
         {
             Shoot();
-            timePerAttack = Time.time + timePerAttack;
+            attack_time = Time.time + attack_speed;
         }
 
+    }
+    void Shoot()
+    {
+        // shoot a laser towards the player
+        Vector3 directionToPlayer = player.position - eyePoint.position;
+        Quaternion rotation = Quaternion.LookRotation(directionToPlayer.normalized);
+        drone_shooter.ShootLaser(directionToPlayer, eyePoint.position);
     }
 }
