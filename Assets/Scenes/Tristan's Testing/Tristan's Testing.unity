@@ -346,7 +346,7 @@ MonoBehaviour:
   AllVFX:
   - {fileID: 335680175}
   module_type: 0
-  module_so: {fileID: 11400000, guid: fed04e1b3743c470381dc7bfab39da06, type: 2}
+  module_so: {fileID: 11400000, guid: ef69d58b5c5950040aecef367c3bbd85, type: 2}
 --- !u!114 &278633518
 MonoBehaviour:
   m_ObjectHideFlags: 0
