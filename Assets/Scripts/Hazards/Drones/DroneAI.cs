@@ -23,6 +23,9 @@ public class DroneAI : MonoBehaviour
     private int currentWaypoint = 0;
     private float visionDistance;
     private float visionAngle;
+
+    public AudioSource audioSource;
+    public AudioClip shootSound;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -140,5 +143,6 @@ public class DroneAI : MonoBehaviour
         Vector3 directionToPlayer = player.position - eyePoint.position;
         Quaternion rotation = Quaternion.LookRotation(directionToPlayer.normalized);
         drone_shooter.ShootLaser(directionToPlayer, eyePoint.position);
+        audioSource.PlayOneShot(shootSound);
     }
 }
