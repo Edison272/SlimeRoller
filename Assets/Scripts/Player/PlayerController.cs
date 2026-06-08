@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
             Vector3 rotate_to_dir = forward_accel * cam_look_dir + sideways_accel * (Quaternion.Euler(0,90,0) * cam_look_dir).normalized;
             true_look_dir = Vector3.Slerp(true_look_dir, rotate_to_dir, Time.deltaTime * body_rotate_speed);
         }
-        //SlimeCore.transform.forward = true_look_dir;
+        SlimeCore.transform.forward = true_look_dir;
 
         active_module.UpdateModule();
     }

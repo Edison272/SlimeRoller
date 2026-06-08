@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8041385990407388737}
   - component: {fileID: 8141169719434454122}
   - component: {fileID: 8490364340319999855}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Right Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 6834591236664868255}
   - component: {fileID: 5196285347916940740}
   - component: {fileID: 4476971095372211171}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DeathParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4995,7 +4995,7 @@ GameObject:
   - component: {fileID: 7571702346115592011}
   - component: {fileID: 9202695709952894350}
   - component: {fileID: 3937272093591481843}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Left Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5085,7 +5085,8 @@ GameObject:
   - component: {fileID: 1247145122119742837}
   - component: {fileID: 3535083396124217604}
   - component: {fileID: 1803859847806530544}
-  m_Layer: 0
+  - component: {fileID: 815981464706977565}
+  m_Layer: 3
   m_Name: Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5107,6 +5108,7 @@ Transform:
   m_Children:
   - {fileID: 7571702346115592011}
   - {fileID: 8041385990407388737}
+  - {fileID: 6963825025675816792}
   m_Father: {fileID: 9094167528356318514}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3535083396124217604
@@ -5166,6 +5168,148 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &815981464706977565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5088660447118107153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0fb1f6f6cb0d448b6de32a77cd4f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  MaxWobble: 0.015
+  WobbleSpeed: 2
+  Recovery: 10
+--- !u!1 &7362336422360679552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6963825025675816792}
+  - component: {fileID: 136912877267149745}
+  - component: {fileID: 1551423354137146773}
+  m_Layer: 3
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6963825025675816792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7362336422360679552}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1247145122119742837}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &136912877267149745
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7362336422360679552}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 2
+  m_Color: {r: 0.360193, g: 1, b: 0.1490196, a: 1}
+  m_Intensity: 3
+  m_Range: 40
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!114 &1551423354137146773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7362336422360679552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &8550802063414007684
 GameObject:
   m_ObjectHideFlags: 0
@@ -5181,7 +5325,7 @@ GameObject:
   - component: {fileID: 6572512271369336788}
   - component: {fileID: 4730847687833453625}
   - component: {fileID: 5088309084441408247}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5220,7 +5364,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8550802063414007684}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5291,7 +5435,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8550802063414007684}
   serializedVersion: 5
-  m_Mass: 15
+  m_Mass: 10
   m_LinearDamping: 1
   m_AngularDamping: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -5374,4 +5518,4 @@ MonoBehaviour:
   AllVFX:
   - {fileID: 5088660447118107153}
   module_type: 0
-  module_so: {fileID: 11400000, guid: ef69d58b5c5950040aecef367c3bbd85, type: 2}
+  module_so: {fileID: 11400000, guid: fed04e1b3743c470381dc7bfab39da06, type: 2}
