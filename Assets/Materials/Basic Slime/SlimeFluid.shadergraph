@@ -656,11 +656,11 @@
         "m_Id": "163f40f1ece248798a3fc4a4e756c012"
     },
     "m_AllowMaterialOverride": false,
-    "m_SurfaceType": 1,
+    "m_SurfaceType": 0,
     "m_ZTestMode": 4,
     "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
-    "m_RenderFace": 0,
+    "m_RenderFace": 2,
     "m_AlphaClip": false,
     "m_CastShadows": true,
     "m_ReceiveShadows": true,
@@ -1704,8 +1704,8 @@
     "m_ObjectId": "82e8199a395742cd89f676f65b315164",
     "m_Title": "Position Info",
     "m_Position": {
-        "x": -2027.19970703125,
-        "y": 333.60009765625
+        "x": -2027.2001953125,
+        "y": 333.6000671386719
     }
 }
 
