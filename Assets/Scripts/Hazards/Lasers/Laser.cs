@@ -78,7 +78,6 @@ public class Laser : Toggleable
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(rayHit.point, 0.23f);
     }
-=======
 
     // 'On' in this case would be disabling the laser
     public override void ToggleOn()
