@@ -1,4 +1,3 @@
-using System.Reflection;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ShadowModule", menuName = "PlayerModules/ShadowModule")]
@@ -11,6 +10,8 @@ public class ShadowModuleSO : PlayerModuleSO
 {
     public float cooldownTime = 5f;
     public float activeDuration = 3f;
+    public GameObject shadowProjectorPrefab;
+    public Vector3 shadowProjectorOffset = new Vector3(0f, 0.05f, 0f);
 
     // create module class instance, 
     public override PlayerModule CreateModuleData(

@@ -8,6 +8,7 @@ TagManager:
   - Hazard
   - Ramp
   - Crate
+  - ShadowPlayer
   layers:
   - Default
   - TransparentFX

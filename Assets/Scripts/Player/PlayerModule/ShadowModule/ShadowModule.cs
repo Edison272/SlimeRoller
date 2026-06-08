@@ -1,98 +1,228 @@
-using System;
-using UnityEngine;
-using UnityEngine.InputSystem;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
 public class ShadowModule : PlayerModule
 {
-    //private List<Rigidbody> affectedObjects = new List<Rigidbody>();
-    private bool ShadowActive;
-    private float timeSinceUse;
-    private float cooldownTime;
-    private float activeDuration;
-    
-    public readonly ShadowModuleSO base_data;
-    public ShadowModule(
-        PlayerController player, 
-        PlayerModuleSO base_data_so
-        ) : base(player, base_data_so)
+    private struct RendererVisibilityState
     {
-        // set base_data
-        base_data = (ShadowModuleSO)base_data_so;
-
-        // connect relevant inputs
-        player.player_ability.canceled += ReleaseModule;
-        player.player_ability.started += UseModule;
-        
-        // connect other information functions
+        public Renderer Renderer;
+        public bool WasEnabled;
     }
 
-    // update functions are called by the player.
+    private bool shadowActive;
+    private float timeSinceUse;
+    private readonly float cooldownTime;
+    private readonly float activeDuration;
+    private Coroutine shadowRoutine;
+    private GameObject shadowProjectorInstance;
+
+    private readonly List<RendererVisibilityState> rendererVisibilityStates = new List<RendererVisibilityState>();
+    private bool hasCachedRendererVisibility;
+
+    public readonly ShadowModuleSO base_data;
+
+    public ShadowModule(
+        PlayerController player,
+        PlayerModuleSO base_data_so
+    ) : base(player, base_data_so)
+    {
+        base_data = (ShadowModuleSO)base_data_so;
+        cooldownTime = base_data.cooldownTime;
+        activeDuration = base_data.activeDuration;
+    }
+
     public override void FixedUpdateModule()
     {
-        if (!ShadowActive)
+        UpdateProjectorPosition();
+    }
+
+    public override void UpdateModule()
+    {
+        if (player.player_ability == null || !player.player_ability.WasPressedThisFrame())
         {
             return;
         }
 
-        
-        // turn into shadow, invisible to cameras & flat and can pass through low ceilings
+        if (shadowActive)
+        {
+            ReleaseModule(default);
+            return;
+        }
 
+        UseModule(default);
     }
-    public override void UpdateModule()
-    {
 
+    public override void OnDeactivate()
+    {
+        ReleaseModule(default);
+        DestroyProjector();
     }
 
     public virtual void ReleaseModule(InputAction.CallbackContext context)
     {
-        ShadowActive = false;
-        OriginalTransparency();
+        if (shadowRoutine != null)
+        {
+            player.StopCoroutine(shadowRoutine);
+            shadowRoutine = null;
+        }
+
+        shadowActive = false;
+        RestoreRendererVisibility();
+        SetProjectorActive(false);
         player.tag = "Player";
     }
 
     public override void UseModule(InputAction.CallbackContext context)
     {
-        ShadowActive = true;
-        timeSinceUse = 0;
-        SetTransparency(0.1f);
-        player.StartCoroutine(ShadowDuration());
+        if (shadowActive)
+        {
+            return;
+        }
+
+        shadowActive = true;
+        timeSinceUse = 0f;
+        HidePlayerRenderers();
+        EnsureProjectorInstance();
+        SetProjectorActive(true);
+        UpdateProjectorPosition();
+        shadowRoutine = player.StartCoroutine(ShadowDuration());
         player.tag = "ShadowPlayer";
     }
 
     public float GetShadowChargePerc()
     {
+        if (cooldownTime <= 0f)
+        {
+            return 0f;
+        }
+
         return timeSinceUse / cooldownTime;
     }
 
     private IEnumerator ShadowDuration()
     {
-        while (timeSinceUse < activeDuration) // Note to self: might need to add clearance checks to avoid getting stuck.
+        while (timeSinceUse < activeDuration)
         {
             timeSinceUse += Time.deltaTime;
             yield return null;
         }
-        OriginalTransparency();
-        ShadowActive = false;
-        player.tag = "Player";
+
+        ReleaseModule(default);
     }
 
-    private void SetTransparency(float alpha)
+    private void HidePlayerRenderers()
     {
-        // write code that sets transparency, but also stores the original so that i can reset it after.
-        return; // not finihsed yet
+        if (!hasCachedRendererVisibility)
+        {
+            rendererVisibilityStates.Clear();
+            Renderer[] renderers = player.GetComponentsInChildren<Renderer>(true);
+            for (int i = 0; i < renderers.Length; i++)
+            {
+                Renderer renderer = renderers[i];
+                if (renderer == null)
+                {
+                    continue;
+                }
+
+                if (!(renderer is MeshRenderer) && !(renderer is SkinnedMeshRenderer))
+                {
+                    continue;
+                }
+
+                rendererVisibilityStates.Add(new RendererVisibilityState
+                {
+                    Renderer = renderer,
+                    WasEnabled = renderer.enabled
+                });
+            }
+
+            hasCachedRendererVisibility = rendererVisibilityStates.Count > 0;
+        }
+
+        for (int i = 0; i < rendererVisibilityStates.Count; i++)
+        {
+            RendererVisibilityState state = rendererVisibilityStates[i];
+            if (state.Renderer == null)
+            {
+                continue;
+            }
+
+            state.Renderer.enabled = false;
+        }
     }
 
-    private void GetTransparency()
+    private void RestoreRendererVisibility()
     {
-        // stores original transparency of the player, so that it can be reset after the shadow effect wears off.
-        return; // not finihsed yet
+        if (!hasCachedRendererVisibility)
+        {
+            return;
+        }
+
+        for (int i = 0; i < rendererVisibilityStates.Count; i++)
+        {
+            RendererVisibilityState state = rendererVisibilityStates[i];
+            if (state.Renderer == null)
+            {
+                continue;
+            }
+
+            state.Renderer.enabled = state.WasEnabled;
+        }
+
+        rendererVisibilityStates.Clear();
+        hasCachedRendererVisibility = false;
     }
 
-    private void OriginalTransparency()
+    private void EnsureProjectorInstance()
     {
-        // resets the transparency to the original value after the shadow effect wears off.
-        return; // not finihsed yet
+        if (shadowProjectorInstance != null)
+        {
+            return;
+        }
+
+        if (base_data.shadowProjectorPrefab == null)
+        {
+            return;
+        }
+
+        shadowProjectorInstance = Object.Instantiate(base_data.shadowProjectorPrefab);
+        shadowProjectorInstance.name = base_data.shadowProjectorPrefab.name + "_Runtime";
+        shadowProjectorInstance.SetActive(false);
     }
 
+    private void SetProjectorActive(bool shouldBeActive)
+    {
+        if (shadowProjectorInstance == null)
+        {
+            return;
+        }
+
+        if (shadowProjectorInstance.activeSelf != shouldBeActive)
+        {
+            shadowProjectorInstance.SetActive(shouldBeActive);
+        }
+    }
+
+    private void UpdateProjectorPosition()
+    {
+        if (!shadowActive || shadowProjectorInstance == null)
+        {
+            return;
+        }
+
+        shadowProjectorInstance.transform.position = player.transform.position + base_data.shadowProjectorOffset;
+    }
+
+    private void DestroyProjector()
+    {
+        if (shadowProjectorInstance == null)
+        {
+            return;
+        }
+
+        Object.Destroy(shadowProjectorInstance);
+        shadowProjectorInstance = null;
+    }
 }
