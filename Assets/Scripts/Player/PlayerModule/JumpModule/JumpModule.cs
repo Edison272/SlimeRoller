@@ -21,6 +21,16 @@ public class JumpModule : PlayerModule
         // connect other information functions
     }
 
+    public override void OnDeactivate()
+    {
+        // unsubscribe input handlers to avoid orphaned callbacks
+        if (player != null && player.player_ability != null)
+        {
+            player.player_ability.canceled -= UseModule;
+            player.player_ability.started -= ChargeModule;
+        }
+    }
+
     // update functions are called by the player.
     public override void FixedUpdateModule()
     {
