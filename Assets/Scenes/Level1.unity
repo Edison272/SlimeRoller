@@ -2352,26 +2352,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1948028867}
     m_Modifications:
-    - target: {fileID: 592191655302563858, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3709094106681053601, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881162709833894144, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881162709833894144, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881162709833894144, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5881162709833894144, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2411,10 +2391,6 @@ PrefabInstance:
     - target: {fileID: 5881162709833894144, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881162709833894144, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6545356434981000122, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_Name
@@ -6538,6 +6514,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 7772677819826520778, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Size.x
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772677819826520778, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8389,6 +8373,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1559692758}
     m_Modifications:
+    - target: {fileID: 574020627838286085, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: zAxis
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 592191655302563858, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_Enabled
       value: 0

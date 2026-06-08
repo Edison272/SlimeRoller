@@ -103,6 +103,32 @@ public class PlayerController : MonoBehaviour
         active_module.UpdateModule();
     }
 
+    // allow external objects (pickups, etc.) to switch the player's active module
+    public void SetModule(PlayerModuleSO newModuleSO)
+    {
+        if (newModuleSO == null) return;
+
+        // deactivate current module if present
+        if (active_module != null)
+        {
+            active_module.OnDeactivate();
+        }
+
+        PlayerModule new_module = null;
+        if (UIController.Instance)
+        {
+            new_module = newModuleSO.CreateModuleData(this, UIController.Instance.MainCanvas.gameObject);
+        }
+        else
+        {
+            new_module = newModuleSO.CreateModuleData(this);
+        }
+
+        // replace active module and store reference to the SO
+        active_module = new_module;
+        module_so = newModuleSO;
+    }
+
     void FixedUpdate()
     {
         // constantly set the player's movement based on the accel values

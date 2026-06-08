@@ -23,6 +23,18 @@ public class GravityModule : PlayerModule
         // connect other information functions
     }
 
+    public override void OnDeactivate()
+    {
+        // unsubscribe input handlers and clear state
+        if (player != null && player.player_ability != null)
+        {
+            player.player_ability.canceled -= ReleaseModule;
+            player.player_ability.started -= UseModule;
+        }
+        gravityActive = false;
+        affectedObjects.Clear();
+    }
+
     // update functions are called by the player.
     public override void FixedUpdateModule()
     {
