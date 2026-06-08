@@ -1,8 +1,7 @@
 using UnityEngine;
 
-public class LevelPuck : MonoBehaviour
+public class HubPuck : MonoBehaviour
 {
-    [SerializeField] private string LevelName;
     [SerializeField] private SceneController sceneController;
     private bool playerHasEntered = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,7 +19,7 @@ public class LevelPuck : MonoBehaviour
         if (other.CompareTag("Player") && !playerHasEntered)
         {
             //Debug.Log("Player hit the level puck");
-            sceneController.LoadLevel(LevelName);
+            sceneController.LoadHub();
             playerHasEntered = true;
         }
     }
