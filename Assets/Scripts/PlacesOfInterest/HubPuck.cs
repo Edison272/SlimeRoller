@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class HubPuck : MonoBehaviour
 {
-    [SerializeField] private SceneController sceneController;
+    private SceneController sceneController;
     private bool playerHasEntered = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (sceneController == null)
-        {
-            sceneController = FindFirstObjectByType<SceneController>();
-        }
+        sceneController = SceneController.Instance;
     }
 
     private void OnTriggerEnter(Collider other)
