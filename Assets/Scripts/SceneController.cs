@@ -7,7 +7,7 @@ public class SceneController : MonoBehaviour
     public static SceneController Instance { get; private set; }
     [SerializeField] private string HubSceneName = "Hub";
     [SerializeField] private string LoadingSceneName = "LoadingScreen";
-    [SerializeField] private float MinLoadingScreenTime = 5f;
+    [SerializeField] private float MinLoadingScreenTime = 3f;
 
     private void Awake()
     {
