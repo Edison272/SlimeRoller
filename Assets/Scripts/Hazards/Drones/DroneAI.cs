@@ -77,7 +77,7 @@ public class DroneAI : MonoBehaviour
             return false;
         }
 
-        if (Physics.Raycast(eyePoint.position, directionToPlayer.normalized, out RaycastHit hit, visionDistance))
+        if (Physics.Raycast(eyePoint.position, directionToPlayer.normalized, out RaycastHit hit, visionDistance, drone_shooter.collision_mask))
         {
             if (hit.collider.CompareTag("Player"))
             {

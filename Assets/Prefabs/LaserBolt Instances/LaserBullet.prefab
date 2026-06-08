@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 034eb9ceec4c84042958a68a27b4e03c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaserBolt
-  speed: 30
+  speed: 50
   lifeTime: 3
   wallMask:
     serializedVersion: 2
