@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: -45
@@ -187,6 +191,10 @@ PrefabInstance:
     - target: {fileID: 8545332116782356618, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
       propertyPath: m_Name
       value: WindowWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545332116782356618, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9069351229980459568, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
       propertyPath: m_LocalScale.x
@@ -258,9 +266,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1799872955}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -336,6 +356,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25
@@ -397,6 +421,10 @@ PrefabInstance:
     - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_Name
       value: WallCorner (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
@@ -538,6 +566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5492482151116012571, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -609,7 +641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 171834641}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,6 +676,10 @@ PrefabInstance:
     - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_Name
       value: WallCorner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
@@ -701,6 +737,10 @@ PrefabInstance:
     - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_Name
       value: WallCorner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
@@ -760,9 +800,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1927543933}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -838,6 +890,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -894,6 +950,10 @@ PrefabInstance:
     - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_Name
       value: WallCorner (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
@@ -953,9 +1013,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 449909487}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -1027,9 +1099,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1799872955}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -1101,9 +1185,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1219475765}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -1179,6 +1275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: -45
@@ -1232,9 +1332,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 449909487}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -1421,9 +1533,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 449909487}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -1499,6 +1623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5492482151116012571, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -1573,6 +1701,14 @@ PrefabInstance:
       propertyPath: zAxis
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2741138660627176064, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830787337587060434, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5881162709833894144, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1613,9 +1749,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6047554607135935057, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6545356434981000122, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 6545356434981000122, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594224294551235238, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774564708920912262, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857288837262623117, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1752,6 +1908,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorFrame
       objectReference: {fileID: 0}
+    - target: {fileID: 4157981781293442429, guid: 3500e28a70212d04983b49c6790463dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1773,6 +1933,10 @@ PrefabInstance:
     - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_Name
       value: WallCorner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1836,6 +2000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25
@@ -1897,6 +2065,10 @@ PrefabInstance:
     - target: {fileID: 8545332116782356618, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
       propertyPath: m_Name
       value: WindowWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545332116782356618, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9069351229980459568, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
       propertyPath: m_LocalScale.x
@@ -1963,9 +2135,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1948028867}
     m_Modifications:
-    - target: {fileID: 574020627838286085, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
-      propertyPath: zAxis
-      value: 1
+    - target: {fileID: 2741138660627176064, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830787337587060434, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5881162709833894144, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2007,9 +2183,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6047554607135935057, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6545356434981000122, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 6545356434981000122, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594224294551235238, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774564708920912262, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857288837262623117, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2089,6 +2285,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorFrame
       objectReference: {fileID: 0}
+    - target: {fileID: 4157981781293442429, guid: 3500e28a70212d04983b49c6790463dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2110,6 +2310,10 @@ PrefabInstance:
     - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_Name
       value: Wall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5492482151116012571, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_LocalScale.x
@@ -2181,9 +2385,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 449909487}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -2258,6 +2474,10 @@ PrefabInstance:
     - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_Name
       value: WallCorner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2486,6 +2706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: -45
@@ -2549,9 +2773,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1219475765}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -2701,6 +2937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowWall
       objectReference: {fileID: 0}
+    - target: {fileID: 8545332116782356618, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9069351229980459568, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -2775,6 +3015,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5492482151116012571, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -2845,9 +3089,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1799872955}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -2923,6 +3179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35
@@ -2981,9 +3241,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 449909487}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -3056,7 +3328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 853909256}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3096,6 +3368,10 @@ PrefabInstance:
     - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_Name
       value: WallCorner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3158,6 +3434,10 @@ PrefabInstance:
     - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_Name
       value: Wall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5492482151116012571, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_LocalScale.x
@@ -3233,6 +3513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5492482151116012571, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -3307,6 +3591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -3368,6 +3656,10 @@ PrefabInstance:
     - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_Name
       value: WallCorner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3491,6 +3783,10 @@ PrefabInstance:
     - target: {fileID: 4157981781293442429, guid: 3500e28a70212d04983b49c6790463dc, type: 3}
       propertyPath: m_Name
       value: DoorFrame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157981781293442429, guid: 3500e28a70212d04983b49c6790463dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3654,6 +3950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5492482151116012571, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -3724,9 +4024,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1219475765}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -3844,6 +4156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -3905,6 +4221,10 @@ PrefabInstance:
     - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_Name
       value: WallCorner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4080,6 +4400,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35
@@ -4141,6 +4465,10 @@ PrefabInstance:
     - target: {fileID: 8545332116782356618, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
       propertyPath: m_Name
       value: WindowWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545332116782356618, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9069351229980459568, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
       propertyPath: m_LocalScale.x
@@ -4313,6 +4641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorFrame
       objectReference: {fileID: 0}
+    - target: {fileID: 4157981781293442429, guid: 3500e28a70212d04983b49c6790463dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4331,9 +4663,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1927543933}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -4400,9 +4744,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1219475765}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -4473,6 +4829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35
@@ -4535,6 +4895,14 @@ PrefabInstance:
       propertyPath: zAxis
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2741138660627176064, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830787337587060434, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5881162709833894144, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4575,13 +4943,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6047554607135935057, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6545356434981000122, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 6545356434981000122, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594224294551235238, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7772677819826520778, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_Size.x
-      value: 0.1145062
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7772677819826520778, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_Center.x
@@ -4593,7 +4973,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7772677819826520778, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774564708920912262, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857288837262623117, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4624,7 +5012,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1466258489}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4659,6 +5047,10 @@ PrefabInstance:
     - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_Name
       value: Wall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5492482151116012571, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_LocalScale.x
@@ -4730,9 +5122,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 449909487}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -4804,9 +5208,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1927543933}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -4881,6 +5297,10 @@ PrefabInstance:
     - target: {fileID: 6010015870242829259, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
       propertyPath: m_Name
       value: Column (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010015870242829259, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6353467725309340017, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
       propertyPath: m_LocalScale.x
@@ -4959,6 +5379,10 @@ PrefabInstance:
     - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_Name
       value: WallCorner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5065,6 +5489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35
@@ -5123,9 +5551,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 449909487}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -5201,6 +5641,14 @@ PrefabInstance:
       propertyPath: zAxis
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2741138660627176064, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830787337587060434, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5881162709833894144, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5241,9 +5689,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6047554607135935057, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6545356434981000122, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 6545356434981000122, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594224294551235238, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774564708920912262, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857288837262623117, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5263,9 +5731,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 449909487}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -5341,6 +5821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8545332116782356618, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9069351229980459568, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -5414,6 +5898,10 @@ PrefabInstance:
     - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_Name
       value: Wall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5492482151116012571, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_LocalScale.x
@@ -5495,9 +5983,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1927543933}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -6033,9 +6533,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1219475765}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -6106,6 +6618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35
@@ -6164,9 +6680,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1927543933}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -6298,6 +6826,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorFrame
       objectReference: {fileID: 0}
+    - target: {fileID: 4157981781293442429, guid: 3500e28a70212d04983b49c6790463dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6319,6 +6851,10 @@ PrefabInstance:
     - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_Name
       value: Wall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5492482151116012571, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_LocalScale.x
@@ -6445,6 +6981,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5148432162076305057, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5492482151116012571, guid: d4b056a15a8fb8f4a89cb062762a19e1, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -6515,9 +7055,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1927543933}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -6590,7 +7142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948028867}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6625,6 +7177,10 @@ PrefabInstance:
     - target: {fileID: 6010015870242829259, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
       propertyPath: m_Name
       value: Column
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010015870242829259, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6353467725309340017, guid: c0697b2d8ebc6584aa4957815034bc3b, type: 3}
       propertyPath: m_LocalScale.x
@@ -6704,6 +7260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -6767,9 +7327,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1927543933}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -6845,6 +7417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowWall
       objectReference: {fileID: 0}
+    - target: {fileID: 8545332116782356618, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9069351229980459568, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -6919,6 +7495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCorner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -6977,9 +7557,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1927543933}
     m_Modifications:
+    - target: {fileID: 576471115913688004, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132398110826534112, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_Name
       value: LightWall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558444256692434908, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4191147689395498342, guid: 2980f71e8c707214f9b40d6b4e5ce894, type: 3}
       propertyPath: m_LocalScale.x
@@ -7054,6 +7646,10 @@ PrefabInstance:
     - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_Name
       value: WallCorner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629378934983438421, guid: 76eb667ed546090479911cc593392195, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974098213872954095, guid: 76eb667ed546090479911cc593392195, type: 3}
       propertyPath: m_LocalPosition.x
