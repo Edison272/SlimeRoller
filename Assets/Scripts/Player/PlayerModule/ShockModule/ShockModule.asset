@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShockModuleSO
   ui_element: {fileID: 4446644189142558269, guid: d4739258eed2cd241829822558f2fe2e, type: 3}
   cooldown_time: 3
-  shock_radius: 5
+  shock_radius: 10
   shock_mask:
     serializedVersion: 2
     m_Bits: 0
+  shockwave_prefab: {fileID: 3600021466149593237, guid: e0e64624a39589f419c94d4e0d24ae1c, type: 3}

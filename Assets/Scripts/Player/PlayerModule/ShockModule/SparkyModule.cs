@@ -7,6 +7,7 @@ public class ShockModule : PlayerModule
     public float curr_cooldown_time = 0;
     public readonly ShockModuleSO base_data;
     private Collider[] shock_colliders = new Collider[32];
+    private GameObject shockwave_instance;
     public ShockModule(
         PlayerController player, 
         PlayerModuleSO base_data_so
@@ -14,6 +15,7 @@ public class ShockModule : PlayerModule
     {
         // set base_data
         base_data = (ShockModuleSO)base_data_so;
+        shockwave_instance = MonoBehaviour.Instantiate(base_data.shockwave_prefab, player.transform.position, Quaternion.identity);
 
         // connect relevant inputs
         player.player_ability.started += UseModule;
@@ -32,6 +34,7 @@ public class ShockModule : PlayerModule
                 curr_cooldown_time - Time.deltaTime, 
                 0);
         }
+        Debug.Log(GetShockRechargePerc());
     }
 
     // on release, jump upwards and then reset charge
@@ -56,8 +59,10 @@ public class ShockModule : PlayerModule
         {
             
         }
-
         curr_cooldown_time += base_data.cooldown_time;
+
+        // VFX
+        shockwave_instance.transform.localScale = Vector3.one * base_data.shock_radius;
     }
 
     # region Get Data

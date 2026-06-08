@@ -7794,6 +7794,10 @@ PrefabInstance:
       propertyPath: free_cam
       value: 
       objectReference: {fileID: 176351401}
+    - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: module_so
+      value: 
+      objectReference: {fileID: 11400000, guid: 454741306ad285d4ea3bae2164a264b5, type: 2}
     - target: {fileID: 8550802063414007684, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: m_Name
       value: Player

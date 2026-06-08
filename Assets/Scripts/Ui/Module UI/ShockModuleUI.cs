@@ -13,17 +13,16 @@ public class ShockModuleUI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
         float shock_perc = module_instance.GetShockRechargePerc();
+        ProgressBar.transform.localScale = new Vector3(shock_perc,1,1);
         if (shock_perc < 1)
         {
             BarText.text = "Recharging...";
-            ProgressBar.transform.localScale = new Vector3(shock_perc,1,1);
         }
         else
         {
