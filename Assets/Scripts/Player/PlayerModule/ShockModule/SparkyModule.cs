@@ -34,7 +34,6 @@ public class ShockModule : PlayerModule
                 curr_cooldown_time - Time.deltaTime, 
                 0);
         }
-        Debug.Log(GetShockRechargePerc());
     }
 
     // on release, jump upwards and then reset charge
