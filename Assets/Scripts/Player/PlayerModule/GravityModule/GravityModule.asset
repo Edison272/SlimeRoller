@@ -17,4 +17,4 @@ MonoBehaviour:
   pullStrength: 20
   orbitRadius: 2
   orbitStrength: 10
-  liftStrength: 30
+  liftStrength: 20
