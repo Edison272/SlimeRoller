@@ -19,4 +19,10 @@ public abstract class PlayerModule
 
     public abstract void UseModule(InputAction.CallbackContext context);
 
+    // called when the module is being replaced or removed so it can cleanup subscriptions/state
+    public virtual void OnDeactivate()
+    {
+        // default: no-op
+    }
+
 }
