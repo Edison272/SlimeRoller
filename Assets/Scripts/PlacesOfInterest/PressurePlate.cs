@@ -10,6 +10,7 @@ public class PressurePlate : MonoBehaviour
     // The list of objects that this pressure plate controls
     // Technically works with different GameObjects, but would need a standardized method to call between the types
     [SerializeField] private List<Toggleable> objectList;
+    private int objectsOnPlate = 0;
 
     public Material plateMaterial;
 
@@ -26,19 +27,32 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        foreach (Toggleable d in objectList)
+        objectsOnPlate++;
+        if (objectsOnPlate == 1)
         {
-            d.ToggleOn();
+            foreach (Toggleable d in objectList)
+            {
+                d.ToggleOn();
+            }
+
+            plateMaterial.color = Color.green;
         }
-        plateMaterial.color = Color.green;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        foreach (Toggleable d in objectList)
+        objectsOnPlate--;
+
+        if (objectsOnPlate <= 0)
         {
-            d.ToggleOff();
+            objectsOnPlate = 0;
+
+            foreach (Toggleable d in objectList)
+            {
+                d.ToggleOff();
+            }
+
+            plateMaterial.color = Color.red;
         }
-        plateMaterial.color = Color.red;
     }
 }
