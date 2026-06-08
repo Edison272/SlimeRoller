@@ -1,19 +1,18 @@
 using System.Reflection;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GravityModule", menuName = "PlayerModules/GravityModule")]
+[CreateAssetMenu(fileName = "ShockModule", menuName = "PlayerModules/ShockModule")]
 /* 
 This is the template class for Player Module Objects. 
 This is where the game will instantiate the class, and get object instances for
 The ability's UI, pickups, and other stuff.
 */
-public class GravityModuleSO : PlayerModuleSO
+public class ShockModuleSO : PlayerModuleSO
 {
-    public float pullRadius = 10;
-    public float pullStrength = 20;
-    public float orbitRadius = 3;
-    public float orbitStrength = 20;
-    public float liftStrength = 5;
+    public float cooldown_time = 2;
+    public float shock_radius = 5;
+    public LayerMask shock_mask;
+    public GameObject shockwave_prefab;
 
     // create module class instance, 
     public override PlayerModule CreateModuleData(
@@ -21,29 +20,30 @@ public class GravityModuleSO : PlayerModuleSO
         GameObject ui_holder
         )
     {
-        GravityModule gravity_module = new GravityModule(player, this);
+        ShockModule shock_module = new ShockModule(player, this);
         
         // set up ui instance
         GameObject ui_instance = MonoBehaviour.Instantiate(ui_element, ui_holder.transform);
-        GravityModuleUI module_ui = ui_instance.GetComponent<GravityModuleUI>();
-        module_ui.module_instance = gravity_module;
+        ShockModuleUI module_ui = ui_instance.GetComponent<ShockModuleUI>();
+        module_ui.module_instance = shock_module;
         
-        return gravity_module;
+        return shock_module;
     }
 
     public override PlayerModule CreateModuleData(
         PlayerController player
         )
     {
-        return new GravityModule(player, this);
+        return new ShockModule(player, this);
     }
+
     public override void CreateNewUI(
         PlayerModule player_module,
         GameObject ui_holder
         )
     {
         GameObject ui_instance = MonoBehaviour.Instantiate(ui_element, ui_holder.transform);
-        GravityModuleUI module_ui = ui_instance.GetComponent<GravityModuleUI>();
-        module_ui.module_instance = (GravityModule)player_module;
+        ShockModuleUI module_ui = ui_instance.GetComponent<ShockModuleUI>();
+        module_ui.module_instance = (ShockModule)player_module;
     }
 }
