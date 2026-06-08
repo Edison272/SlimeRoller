@@ -37,4 +37,13 @@ public class GravityModuleSO : PlayerModuleSO
     {
         return new GravityModule(player, this);
     }
+    public override void CreateNewUI(
+        PlayerModule player_module,
+        GameObject ui_holder
+        )
+    {
+        // GameObject ui_instance = MonoBehaviour.Instantiate(ui_element, ui_holder.transform);
+        // GravityModuleUI module_ui = ui_instance.GetComponent<GravityModuleUI>();
+        // module_ui.module_instance = (GravityModule)player_module;
+    }
 }
