@@ -3405,7 +3405,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   LevelName: Level1
-  sceneController: {fileID: 1899972330}
 --- !u!136 &823573765
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3530,7 +3529,7 @@ Transform:
   m_GameObject: {fileID: 858872827}
   serializedVersion: 2
   m_LocalRotation: {x: 0.22975299, y: -0.000000028042717, z: 0.000000006619989, w: 0.973249}
-  m_LocalPosition: {x: -19.1, y: 3.27, z: -26.41}
+  m_LocalPosition: {x: 0, y: 3.76, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3782,7 +3781,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   LevelName: Level1
-  sceneController: {fileID: 1899972330}
 --- !u!136 &899555536
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4549,8 +4547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5448305b84195445adb09804a6a44e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  LevelName: Level1
-  sceneController: {fileID: 1899972330}
+  LevelName: Level2
 --- !u!136 &1059806614
 CapsuleCollider:
   m_ObjectHideFlags: 0

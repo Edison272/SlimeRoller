@@ -837,6 +837,10 @@ MonoBehaviour:
   eyePoint: {fileID: 5203609972507093630}
   player: {fileID: 0}
   laserPrefab: {fileID: 8169349582148771070, guid: 2073873b5040a47d7aad910e4e670f15, type: 3}
+  droneLights:
+  - {fileID: 525530428541198527}
+  - {fileID: 1339146033616743281}
+  - {fileID: 1325623852772147103}
   attack_speed: 0.2
   attack_time: 0
   drone_shooter:

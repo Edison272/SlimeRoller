@@ -13,6 +13,9 @@ public class DroneAI : MonoBehaviour
     public Transform player;
     public GameObject laserPrefab;
 
+    public Light[] droneLights;
+    private Color patrolLightColor = new Color32(255, 148, 0, 255);
+
     // manage attack speed
     [SerializeField] private float attack_speed = 0.1f;
     [SerializeField] private float attack_time = 0;
@@ -53,14 +56,27 @@ public class DroneAI : MonoBehaviour
             case DroneState.Patrol:
                 GetComponent<Renderer>().material = patrolMaterial;
                 visionCone.color = Color.yellow;
+                SetDroneLights(patrolLightColor);
                 Patrol();
                 break;
             // Attack State
             case DroneState.Attack:
                 GetComponent<Renderer>().material = attackMaterial;
                 visionCone.color = Color.red;
+                SetDroneLights(Color.red);
                 Attack();
                 break;
+        }
+    }
+
+    void SetDroneLights(Color color)
+    {
+        foreach (Light light in droneLights)
+        {
+            if (light != null)
+            {
+                light.color = color;
+            }
         }
     }
     
@@ -107,6 +123,7 @@ public class DroneAI : MonoBehaviour
         if (InVisionCone())
         {
             agent.ResetPath();
+            SetDroneLights(Color.red);
             currentState = DroneState.Attack;
         }
     }
@@ -121,6 +138,7 @@ public class DroneAI : MonoBehaviour
         if (!InVisionCone())
         {
             agent.SetDestination(waypoints[currentWaypoint].position);
+            SetDroneLights(patrolLightColor);
             currentState = DroneState.Patrol;
             return;
         }
