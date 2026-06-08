@@ -1,15 +1,13 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Laser : Toggleable
+public class Laser : MonoBehaviour
 {
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private float laserDistance = 8.0f;
     [SerializeField] private LayerMask ignoreMask;
     [SerializeField] private UnityEvent OnHitTarget;
     [SerializeField] private int numBounces = 0; // How many times can this laser reflect?
-
-    private bool laserEnabled = true; // Variable to hold the laser distance so it can be re-enabled
 
     private RaycastHit rayHit;
     private Ray ray;
@@ -21,11 +19,8 @@ public class Laser : Toggleable
     private void Update()
     {
         lineRenderer.positionCount = 0;
-        if (laserEnabled)
-        {
-            lineRenderer.positionCount = numBounces + 2;
-            UpdateReflection(0, laserDistance, transform.position, transform.forward);
-        }
+        lineRenderer.positionCount = numBounces + 2;
+        UpdateReflection(0, laserDistance, transform.position, transform.forward);
     }
 
     private void UpdateReflection(int reflectionCount, float distance, Vector3 collision, Vector3 dir)
@@ -78,23 +73,4 @@ public class Laser : Toggleable
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(rayHit.point, 0.23f);
     }
-<<<<<<< Updated upstream:Assets/Stan-Folder/Scripts/Laser.cs
 }
-=======
-
-    // 'On' in this case would be disabling the laser
-    public override void ToggleOn()
-    {
-        laserEnabled = false;
-    }
-
-    public override void ToggleOff()
-    {
-        laserEnabled = true;
-    }
-    public override void ToggleDisable()
-    {
-        laserEnabled = false;
-    }
-}
->>>>>>> Stashed changes:Assets/Scripts/Hazards/Lasers/Laser.cs
