@@ -14,10 +14,11 @@ public class DroneAI : MonoBehaviour
     public GameObject laserPrefab;
 
     // manage attack speed
-    [SerializeField] private float attack_speed = 0.5f;
+    [SerializeField] private float attack_speed = 0.1f;
     [SerializeField] private float attack_time = 0;
 
     [SerializeField] private BoltShooter drone_shooter;
+    [SerializeField] private float hover_height = 3.0f;
     private NavMeshAgent agent;
     private int currentWaypoint = 0;
     private float visionDistance;
@@ -91,7 +92,7 @@ public class DroneAI : MonoBehaviour
     {
         // Hover
         Vector3 hoverPosition = transform.position;
-        hoverPosition.y = 4.0f;
+        hoverPosition.y = hover_height;
         transform.position = hoverPosition;
         
         if(!agent.pathPending && agent.remainingDistance < 0.5f)
@@ -111,7 +112,7 @@ public class DroneAI : MonoBehaviour
     {
         // Hover
         Vector3 hoverPosition = transform.position;
-        hoverPosition.y = 4.0f;
+        hoverPosition.y = hover_height;
         transform.position = hoverPosition;
 
         if (!InVisionCone())

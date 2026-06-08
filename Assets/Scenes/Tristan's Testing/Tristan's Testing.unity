@@ -1853,6 +1853,10 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2571274399496557259, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
+      propertyPath: hover_height
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571274399496557259, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
       value: 
       objectReference: {fileID: 1717146392}
