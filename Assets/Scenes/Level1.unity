@@ -3353,6 +3353,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1810340937}
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: module_so
+      value: 
+      objectReference: {fileID: 11400000, guid: fed04e1b3743c470381dc7bfab39da06, type: 2}
+    - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: main_camera
       value: 
       objectReference: {fileID: 623688320}

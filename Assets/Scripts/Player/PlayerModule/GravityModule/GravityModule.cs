@@ -5,8 +5,9 @@ using System.Collections.Generic;
 public class GravityModule : PlayerModule
 {
     private List<Rigidbody> affectedObjects = new List<Rigidbody>();
-    private bool gravityActive;
+    public bool gravityActive {get; private set;}
     public readonly GravityModuleSO base_data;
+    private Collider[] objectsInRange = new Collider[0];
     public GravityModule(
         PlayerController player, 
         PlayerModuleSO base_data_so
@@ -30,7 +31,7 @@ public class GravityModule : PlayerModule
             return;
         }
 
-        Collider[] objectsInRange = Physics.OverlapSphere(player.transform.position, base_data.pullRadius);
+        objectsInRange = Physics.OverlapSphere(player.transform.position, base_data.pullRadius);
 
         affectedObjects.Clear();
 
@@ -80,6 +81,10 @@ public class GravityModule : PlayerModule
     public override void UseModule(InputAction.CallbackContext context)
     {
         gravityActive = true;
+    }
+    public virtual int GetGravityTargets()
+    {
+        return objectsInRange.Length;
     }
 
 }
