@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float base_speed = 10;
     [SerializeField] float curr_speed;
     public PlayerState player_state = PlayerState.OnGround;
+    private LayerMask ground_check_mask = 1 << 6;
 
     // Looking values
     Vector3 cam_look_dir = Vector3.zero;
@@ -42,6 +43,13 @@ public class PlayerController : MonoBehaviour
 
     // Player Module
     public PlayerModuleType module_type;
+    public PlayerModule active_module;
+    public PlayerModuleSO module_so;
+
+    // Player States - accessed by external scripts
+    public bool on_ground {get; private set;} = false;
+
+
 
     void Awake()
     {
@@ -52,21 +60,26 @@ public class PlayerController : MonoBehaviour
         if (!player_input) {player_input = GetComponent<PlayerInput>();}
         player_ability = player_input.actions["Ability"];
 
-        // set player ability module
-        switch (module_type) {
-            case PlayerModuleType.JUMP:
-                PlayerModule new_module = new JumpModule(this);
-                break;
-        }
         curr_speed = base_speed;
 
         true_look_dir = SlimeCore.transform.forward;
-        player_state = PlayerState.OnGround;
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // set player ability starting module
+        PlayerModule new_module = null;
+        if (UIController.Instance)
+        {
+            new_module = module_so.CreateModuleData(this, UIController.Instance.MainCanvas.gameObject);
+        }
+        else
+        {
+            new_module = module_so.CreateModuleData(this);
+        }
+        active_module = new_module;
+        
         // disable default cursor
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -85,20 +98,72 @@ public class PlayerController : MonoBehaviour
             Vector3 rotate_to_dir = forward_accel * cam_look_dir + sideways_accel * (Quaternion.Euler(0,90,0) * cam_look_dir).normalized;
             true_look_dir = Vector3.Slerp(true_look_dir, rotate_to_dir, Time.deltaTime * body_rotate_speed);
         }
-        //SlimeCore.transform.forward = true_look_dir;
+        SlimeCore.transform.forward = true_look_dir;
+
+        active_module.UpdateModule();
+    }
+
+    // allow external objects (pickups, etc.) to switch the player's active module
+    public void SetModule(PlayerModuleSO newModuleSO)
+    {
+        if (newModuleSO == null) return;
+
+        // deactivate current module if present
+        if (active_module != null)
+        {
+            active_module.OnDeactivate();
+        }
+
+        PlayerModule new_module = null;
+        if (UIController.Instance)
+        {
+            new_module = newModuleSO.CreateModuleData(this, UIController.Instance.MainCanvas.gameObject);
+        }
+        else
+        {
+            new_module = newModuleSO.CreateModuleData(this);
+        }
+
+        // replace active module and store reference to the SO
+        active_module = new_module;
+        module_so = newModuleSO;
     }
 
     void FixedUpdate()
     {
+        // constantly set the player's movement based on the accel values
         player_rb.AddForce(cam_look_dir * forward_accel + sideways_accel * (Quaternion.Euler(0,90,0) * cam_look_dir).normalized);
     
+        // check if player is on the ground
+        RaycastHit ground_touch;
+        on_ground = Physics.Raycast(
+            transform.position, 
+            Vector3.down,
+            out ground_touch,
+            transform.localScale.y/1.9f,
+            ground_check_mask
+            );
+        if (on_ground)
+        {
+            Debug.DrawLine(transform.position, ground_touch.point, Color.green);
+        } 
+        else
+        {
+            Debug.DrawLine(transform.position, transform.position + Vector3.down * (transform.localScale.y/1.9f), Color.red);
+        }
+
         // check if player has fallen off the map
         if (player_state != PlayerState.Dead && player_rb.position.y < -10)
         {
             OnDeath();
         }
+
+        // update ability if necessary
+        active_module.FixedUpdateModule();
+        
     }
 
+    // update the accel values on input
     void OnMove(InputValue action)
     {
         if (player_state != PlayerState.Dead)
@@ -111,7 +176,7 @@ public class PlayerController : MonoBehaviour
 
     void OnAbility(InputValue action)
     {
-        
+        //active_module.UseModule(action);
     }
     // hide anypart of the player which is visible
     void ToggleVFX(bool is_on)
@@ -161,6 +226,13 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Physics
+    // used to add physics impulse forces to the player from the ability modules
+    public void ApplyImpulse(Vector2 direction, float power)
+    {
+        player_rb.AddForce(direction * power, ForceMode.Impulse);
+
+    }
+
     // This is called automatically when a collision begins
     private void OnCollisionEnter(Collision collision)
     {
