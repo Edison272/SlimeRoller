@@ -8,7 +8,7 @@ public class ShockModule : PlayerModule
     public float curr_cooldown_time = 0;
     public readonly ShockModuleSO base_data;
     private Collider[] shock_colliders = new Collider[32];
-    private int uses = 0;
+    public int uses {get; private set;} = 0;
     public ShockModule(
         PlayerController player, 
         PlayerModuleSO base_data_so

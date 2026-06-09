@@ -26,7 +26,7 @@ public class ShockModuleUI : MonoBehaviour
         }
         else
         {
-            BarText.text = "Shockwave Ready!";
+            BarText.text = string.Format("Shockwave Ready! - Uses: {0}", module_instance.uses);
         }
         
     }
