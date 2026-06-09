@@ -61,6 +61,13 @@ public class ShockModule : PlayerModule
             GameObject target = shock_colliders[i].gameObject;
             Debug.Log(target.gameObject);
             DroneAI drone_ai = target.gameObject.GetComponent<DroneAI>();
+            SecurityCameraAI camera_ai = target.gameObject.GetComponent<SecurityCameraAI>();
+            
+            if(camera_ai)
+            {
+                camera_ai.Stun(base_data.stun_time);
+            }
+
             if(drone_ai)
             {
                 drone_ai.Stun(base_data.stun_time);

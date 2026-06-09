@@ -28,6 +28,11 @@ public class SecurityCameraAI : MonoBehaviour
     private float visionDistance;
     private float visionAngle;
 
+    // Stun variables
+    private bool isStunned = false;
+    private float stun_timer = 0f;
+    private float stun_duration;
+
     // audio
     public AudioSource audioSource;
     public AudioClip shootSound;
@@ -56,6 +61,20 @@ public class SecurityCameraAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isStunned)
+        {
+            ChangeAmbientSound(droneSound);
+
+            // Stun logic
+            stun_timer += Time.deltaTime;
+            if (stun_timer >= stun_duration)
+            {
+                isStunned = false;
+                currentState = CameraState.Scanning;
+            }
+            return;
+        }
+
         switch (currentState)
         {
             // Scanning State
@@ -184,5 +203,14 @@ public class SecurityCameraAI : MonoBehaviour
         audioSource2.clip = clip;
         audioSource2.loop = true;
         audioSource2.Play();
+    }
+
+    public void Stun(float duration)
+    {
+        isStunned = true;
+        stun_duration = duration;
+        stun_timer = 0f;
+
+        visionCone.color = Color.blue;
     }
 }

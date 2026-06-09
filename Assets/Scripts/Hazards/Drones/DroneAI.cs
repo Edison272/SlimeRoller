@@ -31,6 +31,7 @@ public class DroneAI : MonoBehaviour
     private float visionDistance;
     private float visionAngle;
 
+    // Stun variables
     private bool isStunned = false;
     private float stun_timer = 0f;
     private float stun_duration;
