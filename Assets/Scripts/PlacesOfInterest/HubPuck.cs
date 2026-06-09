@@ -13,7 +13,7 @@ public class HubPuck : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("thing hit the level puck");
-        if (other.CompareTag("Player") && !playerHasEntered)
+        if ((other.CompareTag("Player") || other.CompareTag("ShadowPlayer")) && !playerHasEntered)
         {
             //Debug.Log("Player hit the level puck");
             sceneController.LoadHub();

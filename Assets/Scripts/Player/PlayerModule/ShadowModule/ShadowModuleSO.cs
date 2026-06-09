@@ -23,9 +23,9 @@ public class ShadowModuleSO : PlayerModuleSO
         ShadowModule shadow_module = new ShadowModule(player, this);
         
         // set up ui instance
-        // GameObject ui_instance = MonoBehaviour.Instantiate(ui_element, ui_holder.transform);
-        // GravityModuleUI module_ui = ui_instance.GetComponent<GravityModuleUI>();
-        // module_ui.module_instance = gravity_module;
+        GameObject ui_instance = MonoBehaviour.Instantiate(ui_element, ui_holder.transform);
+        ShadowModuleUI module_ui = ui_instance.GetComponent<ShadowModuleUI>();
+        module_ui.module_instance = shadow_module;
         
         return shadow_module;
     }

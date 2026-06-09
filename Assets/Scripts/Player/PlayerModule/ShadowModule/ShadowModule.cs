@@ -12,6 +12,7 @@ public class ShadowModule : PlayerModule
     }
 
     private bool shadowActive;
+    private float shadowElapsedTime;
     private float timeSinceUse;
     private readonly float cooldownTime;
     private readonly float activeDuration;
@@ -32,12 +33,18 @@ public class ShadowModule : PlayerModule
         base_data = (ShadowModuleSO)base_data_so;
         cooldownTime = base_data.cooldownTime;
         activeDuration = base_data.activeDuration;
+        timeSinceUse = cooldownTime;
     }
 
     public override void FixedUpdateModule()
     {
         UpdateProjectorPosition();
         UpdateReconstructionVFXPosition();
+
+        if (timeSinceUse < cooldownTime)
+        {
+            timeSinceUse = Mathf.Min(cooldownTime, timeSinceUse + Time.fixedDeltaTime);
+        }
     }
 
     public override void UpdateModule()
@@ -79,6 +86,10 @@ public class ShadowModule : PlayerModule
 
     public override void UseModule(InputAction.CallbackContext context)
     {
+        if (timeSinceUse < cooldownTime)
+        {
+            return;
+        }
         if (shadowActive)
         {
             return;
@@ -98,20 +109,50 @@ public class ShadowModule : PlayerModule
     {
         if (cooldownTime <= 0f)
         {
+            return 1f;
+        }
+
+        return Mathf.Clamp01(timeSinceUse / cooldownTime);
+    }
+
+    public float GetShadowDurationPerc()
+    {
+        if (!shadowActive || activeDuration <= 0f)
+        {
             return 0f;
         }
 
-        return timeSinceUse / cooldownTime;
+        if (shadowRoutine == null)
+        {
+            return 0f;
+        }
+
+        return Mathf.Clamp01(shadowElapsedTime / activeDuration);
+    }
+
+    public float GetShadowDurationInSec()
+    {
+        if (!shadowActive || activeDuration <= 0f)
+        {
+            return 0f;
+        }
+
+        if (shadowRoutine == null)
+        {
+            return 0f;
+        }
+
+        return Mathf.Max(0f, activeDuration - shadowElapsedTime);
     }
 
     private IEnumerator ShadowDuration()
     {
-        while (timeSinceUse < activeDuration)
+        shadowElapsedTime = 0f;
+        while (shadowElapsedTime < activeDuration)
         {
-            timeSinceUse += Time.deltaTime;
             yield return null;
+            shadowElapsedTime += Time.deltaTime;
         }
-
         ReleaseModule(default);
     }
 
