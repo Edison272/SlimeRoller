@@ -2688,7 +2688,7 @@ Transform:
   m_GameObject: {fileID: 347188446}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.88, y: 2.123, z: -8.07}
+  m_LocalPosition: {x: 14.95, y: 2.123, z: -8.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4331,7 +4331,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1072548775565299506, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: m_Range
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1767966768243698729, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: m_Volume
@@ -6071,7 +6071,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1072548775565299506, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: m_Range
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1767966768243698729, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: m_Volume
@@ -6963,6 +6963,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1790202614}
     - target: {fileID: 2571274399496557259, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571274399496557259, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
       value: 
       objectReference: {fileID: 1150351130}
@@ -6978,6 +6982,22 @@ PrefabInstance:
       propertyPath: 'waypoints.Array.data[3]'
       value: 
       objectReference: {fileID: 347188447}
+    - target: {fileID: 2571274399496557259, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
+      propertyPath: 'waypoints.Array.data[4]'
+      value: 
+      objectReference: {fileID: 310547312}
+    - target: {fileID: 2571274399496557259, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
+      propertyPath: 'waypoints.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1418352315}
+    - target: {fileID: 2571274399496557259, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
+      propertyPath: 'waypoints.Array.data[6]'
+      value: 
+      objectReference: {fileID: 1150351130}
+    - target: {fileID: 3650167076319378019, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
+      propertyPath: m_Range
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7881689245834447092, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
       propertyPath: m_Name
       value: Drone
