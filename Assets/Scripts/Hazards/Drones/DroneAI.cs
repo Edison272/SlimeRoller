@@ -215,7 +215,7 @@ public class DroneAI : MonoBehaviour
         audioSource2.Play();
     }
 
-    void Stun(float duration)
+    public void Stun(float duration)
     {
         isStunned = true;
         stun_duration = duration;

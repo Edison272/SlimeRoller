@@ -52,9 +52,13 @@ public class ShockModule : PlayerModule
             base_data.shock_mask);
 
         // Iterate through detected colliders and send the AddDamage message.
-        for (int i = 0; i < numColliders; i++)
+        foreach (Collider target in shock_colliders)
         {
-            
+            DroneAI drone_ai = target.gameObject.GetComponent<DroneAI>();
+            if(drone_ai)
+            {
+                drone_ai.Stun(base_data.stun_time);
+            }
         }
         curr_cooldown_time += base_data.cooldown_time;
         GameObject shockwave_instance = MonoBehaviour.Instantiate(base_data.shockwave_prefab, player.transform.position, Quaternion.identity);
