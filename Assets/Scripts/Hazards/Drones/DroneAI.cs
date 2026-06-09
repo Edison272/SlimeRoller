@@ -23,6 +23,7 @@ public class DroneAI : MonoBehaviour
 
     [SerializeField] private BoltShooter drone_shooter;
     [SerializeField] private float hover_height = 3.0f;
+    [SerializeField] private float patrol_speed = 3.5f;
     
     private float attack_delay_timer = 0f;
     private NavMeshAgent agent;
@@ -42,6 +43,7 @@ public class DroneAI : MonoBehaviour
     {
         // NavMeshAgent setup and first destination
         agent = GetComponent<NavMeshAgent>();
+        agent.speed = patrol_speed;
 
         if (waypoints.Length > 0)
         {
