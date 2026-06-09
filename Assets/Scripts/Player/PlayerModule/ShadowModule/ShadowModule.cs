@@ -17,6 +17,7 @@ public class ShadowModule : PlayerModule
     private readonly float activeDuration;
     private Coroutine shadowRoutine;
     private GameObject shadowProjectorInstance;
+    private GameObject reconstructionParticleInstance;
 
     private readonly List<RendererVisibilityState> rendererVisibilityStates = new List<RendererVisibilityState>();
     private bool hasCachedRendererVisibility;
@@ -36,6 +37,7 @@ public class ShadowModule : PlayerModule
     public override void FixedUpdateModule()
     {
         UpdateProjectorPosition();
+        UpdateReconstructionVFXPosition();
     }
 
     public override void UpdateModule()
@@ -62,6 +64,7 @@ public class ShadowModule : PlayerModule
 
     public virtual void ReleaseModule(InputAction.CallbackContext context)
     {
+        PlayReconstructionVFX();
         if (shadowRoutine != null)
         {
             player.StopCoroutine(shadowRoutine);
@@ -224,5 +227,34 @@ public class ShadowModule : PlayerModule
 
         Object.Destroy(shadowProjectorInstance);
         shadowProjectorInstance = null;
+    }
+
+    private void PlayReconstructionVFX()
+    {
+        if (base_data.reconstructionParticlePrefab == null)
+        {
+            return;
+        }
+
+        if (reconstructionParticleInstance != null)
+        {
+            Object.Destroy(reconstructionParticleInstance);
+        }
+
+        reconstructionParticleInstance = Object.Instantiate(
+            base_data.reconstructionParticlePrefab,
+            player.transform.position,
+            Quaternion.identity
+        );
+    }
+
+    private void UpdateReconstructionVFXPosition()
+    {
+        if (reconstructionParticleInstance == null)
+        {
+            return;
+        }
+
+        reconstructionParticleInstance.transform.position = player.transform.position;
     }
 }

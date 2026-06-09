@@ -10,6 +10,7 @@ public class ShadowModuleSO : PlayerModuleSO
 {
     public float cooldownTime = 5f;
     public float activeDuration = 3f;
+    public GameObject reconstructionParticlePrefab;
     public GameObject shadowProjectorPrefab;
     public Vector3 shadowProjectorOffset = new Vector3(0f, 0.05f, 0f);
 

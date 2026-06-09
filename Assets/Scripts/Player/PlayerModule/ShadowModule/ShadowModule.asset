@@ -15,5 +15,6 @@ MonoBehaviour:
   ui_element: {fileID: 3783300857396107755, guid: 72f66261444542a43892039628674fb8, type: 3}
   cooldownTime: 5
   activeDuration: 3
+  reconstructionParticlePrefab: {fileID: 1677803712601383593, guid: 72ce53a4a7e645f47a6e4afdc89ba9fe, type: 3}
   shadowProjectorPrefab: {fileID: 3464761365186015880, guid: 3d66a6c45305b284e850390923152f7c, type: 3}
   shadowProjectorOffset: {x: 0, y: 1, z: 0}
