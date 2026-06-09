@@ -11147,7 +11147,7 @@ PrefabInstance:
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: module_so
       value: 
-      objectReference: {fileID: 11400000, guid: 454741306ad285d4ea3bae2164a264b5, type: 2}
+      objectReference: {fileID: 11400000, guid: ef69d58b5c5950040aecef367c3bbd85, type: 2}
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: main_camera
       value: 
