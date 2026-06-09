@@ -57,6 +57,7 @@ public class GravityModule : PlayerModule
                 {
                     affectedObjects.Add(rb);
                 }
+
             }
         }
 
@@ -98,7 +99,7 @@ public class GravityModule : PlayerModule
     }
     public virtual int GetGravityTargets()
     {
-        return objectsInRange.Length;
+        return affectedObjects.Count; 
     }
 
 }

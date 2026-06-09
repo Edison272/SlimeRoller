@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Jump Module
   m_EditorClassIdentifier: Assembly-CSharp::JumpModuleSO
   ui_element: {fileID: 4446644189142558269, guid: ed456ea6a56295542a08d62e20837681, type: 3}
-  membrane_material: {fileID: -876546973899608171, guid: 4f32ad1f72f8a9540a87646f4141238f, type: 3}
+  membrane_material: {fileID: 2100000, guid: f28d3c4231100454c86cee6596588608, type: 2}
   core_material: {fileID: 2100000, guid: 8704e036c3da4c2479603f8e834892a9, type: 2}
   slime_glow: {r: 0.36078432, g: 1, b: 0.14901961, a: 0}
   max_charge_time: 2

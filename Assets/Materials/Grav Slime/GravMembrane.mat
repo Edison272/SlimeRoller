@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SlimeMembrane
+  m_Name: GravMembrane
   m_Shader: {fileID: -6465566751694194690, guid: 4f32ad1f72f8a9540a87646f4141238f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -121,6 +121,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _ReflectionFactor: 1
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -133,8 +134,9 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0.64705884}
     - _Color: {r: 1, g: 1, b: 1, a: 0.64705884}
-    - _ContainerColor: {r: 63.99999, g: 63.99999, b: 63.99999, a: 1}
+    - _ContainerColor: {r: 2.246483, g: 0, b: 203.33261, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FresnelColor: {r: 53.84623, g: 53.84623, b: 53.84623, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
