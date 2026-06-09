@@ -71,6 +71,14 @@ public class DroneAI : MonoBehaviour
     {
         if (isStunned)
         {
+            ChangeAmbientSound(droneSound);
+
+            // Hover
+            Vector3 hoverPosition = transform.position;
+            hoverPosition.y = hover_height;
+            transform.position = hoverPosition;
+
+            // Stun logic
             stun_timer += Time.deltaTime;
             if (stun_timer >= stun_duration)
             {
@@ -80,7 +88,7 @@ public class DroneAI : MonoBehaviour
             }
             return;
         }
-        
+
         switch (currentState)
         {
             // Patrol State
