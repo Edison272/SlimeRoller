@@ -59,7 +59,6 @@ public class ShockModule : PlayerModule
         for (int i = 0; i < numColliders; i++)
         {
             GameObject target = shock_colliders[i].gameObject;
-            Debug.Log(target.gameObject);
             DroneAI drone_ai = target.gameObject.GetComponent<DroneAI>();
             SecurityCameraAI camera_ai = target.gameObject.GetComponent<SecurityCameraAI>();
             

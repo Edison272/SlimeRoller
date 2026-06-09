@@ -1893,6 +1893,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5649528670772563589, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7176257828375786617, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: player
       value: 
@@ -1901,9 +1905,17 @@ PrefabInstance:
       propertyPath: attack_delay
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7449901123501976862, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7790061808633005223, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: m_Name
       value: SecurityCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790061808633005223, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

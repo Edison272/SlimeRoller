@@ -64,7 +64,7 @@ public class SecurityCameraAI : MonoBehaviour
         if (isStunned)
         {
             ChangeAmbientSound(droneSound);
-
+            Debug.Log("skib");
             // Stun logic
             stun_timer += Time.deltaTime;
             if (stun_timer >= stun_duration)
@@ -210,6 +210,7 @@ public class SecurityCameraAI : MonoBehaviour
         isStunned = true;
         stun_duration = duration;
         stun_timer = 0f;
+        Debug.Log("feixiao");
 
         visionCone.color = Color.blue;
     }
