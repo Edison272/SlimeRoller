@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 215740163463511252}
   - component: {fileID: 7808715059325534088}
   - component: {fileID: 3709094106681053601}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door_A_03_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 7252723437796711695}
   - component: {fileID: 2629292701714714603}
   - component: {fileID: 5333229456570199557}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 8790729721197444196}
   - component: {fileID: 9205764434243893471}
   - component: {fileID: 592191655302563858}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door_A_03_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 5881162709833894144}
   - component: {fileID: 7772677819826520778}
   - component: {fileID: 574020627838286085}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door_A_03_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6383272161476361779}
   - component: {fileID: 4112795841755358361}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DoorSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 7791453805276233223}
   - component: {fileID: 3380637704130398358}
   - component: {fileID: 8527910663704501146}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 2815959671942420721}
   - component: {fileID: 5365165442794703713}
   - component: {fileID: 6883975386266362804}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

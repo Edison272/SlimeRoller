@@ -27,9 +27,13 @@ public class DroneAI : MonoBehaviour
     private float visionDistance;
     private float visionAngle;
 
+    // audio
     public AudioSource audioSource;
     public AudioClip shootSound;
-    
+    public AudioSource audioSource2;
+    public AudioClip droneSound;
+    public AudioClip alarmSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -45,6 +49,12 @@ public class DroneAI : MonoBehaviour
         visionDistance = visionCone.range;
         visionAngle = visionCone.spotAngle;
         visionCone.color = Color.yellow;
+
+        // Play drone sound
+        audioSource2.clip = droneSound;
+        audioSource2.loop = true;
+        audioSource2.spatialBlend = 1f;
+        audioSource2.Play();
     }
 
     // Update is called once per frame
@@ -123,6 +133,7 @@ public class DroneAI : MonoBehaviour
         if (InVisionCone())
         {
             agent.ResetPath();
+            ChangeAmbientSound(alarmSound);
             SetDroneLights(Color.red);
             currentState = DroneState.Attack;
         }
@@ -139,6 +150,7 @@ public class DroneAI : MonoBehaviour
         {
             agent.SetDestination(waypoints[currentWaypoint].position);
             SetDroneLights(patrolLightColor);
+            ChangeAmbientSound(droneSound);
             currentState = DroneState.Patrol;
             return;
         }
@@ -162,5 +174,16 @@ public class DroneAI : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(directionToPlayer.normalized);
         drone_shooter.ShootLaser(directionToPlayer, eyePoint.position);
         audioSource.PlayOneShot(shootSound);
+    }
+
+    void ChangeAmbientSound(AudioClip clip)
+    {
+        if (audioSource2.clip == clip)
+            return;
+
+        audioSource2.Stop();
+        audioSource2.clip = clip;
+        audioSource2.loop = true;
+        audioSource2.Play();
     }
 }
