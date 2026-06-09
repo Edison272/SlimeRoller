@@ -31,6 +31,10 @@ public class DroneAI : MonoBehaviour
     private float visionDistance;
     private float visionAngle;
 
+    private bool isStunned = false;
+    private float stun_timer = 0f;
+    private float stun_duration;
+
     // audio
     public AudioSource audioSource;
     public AudioClip shootSound;
@@ -65,6 +69,18 @@ public class DroneAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isStunned)
+        {
+            stun_timer += Time.deltaTime;
+            if (stun_timer >= stun_duration)
+            {
+                isStunned = false;
+                agent.isStopped = false;
+                currentState = DroneState.Patrol;
+            }
+            return;
+        }
+        
         switch (currentState)
         {
             // Patrol State
@@ -197,5 +213,16 @@ public class DroneAI : MonoBehaviour
         audioSource2.clip = clip;
         audioSource2.loop = true;
         audioSource2.Play();
+    }
+
+    void Stun(float duration)
+    {
+        isStunned = true;
+        stun_duration = duration;
+        stun_timer = 0f;
+        agent.isStopped = true;
+
+        visionCone.color = Color.blue;
+        SetDroneLights(Color.blue);
     }
 }
