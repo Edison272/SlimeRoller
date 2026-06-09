@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 547763326217392875}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -988,12 +988,12 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 0.5
-          inSlope: -2
-          outSlope: -2
+          inSlope: -0.8299413
+          outSlope: -0.8299413
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
-          outWeight: 0
+          outWeight: 0.1825613
         - serializedVersion: 3
           time: 1
           value: 0
@@ -4782,7 +4782,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8704e036c3da4c2479603f8e834892a9, type: 2}
+  - {fileID: 2100000, guid: 9d8257093df746e40a035a439d7986fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
