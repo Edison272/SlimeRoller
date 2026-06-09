@@ -937,6 +937,9 @@ MonoBehaviour:
   eyePoint: {fileID: 1173236053}
   player: {fileID: 278633523}
   laserPrefab: {fileID: 24567790706809978, guid: 83f43046c2fd2274ebbb42b002cc337c, type: 3}
+  attack_speed: 0.1
+  attack_time: 0
+  attack_delay: 1
   drone_shooter:
     collision_mask:
       serializedVersion: 2
@@ -945,6 +948,7 @@ MonoBehaviour:
     inaccuracy: 2
   rotateAngle: 60
   rotateSpeed: 30
+  pauseDuration: 2
   audioSource: {fileID: 480385291}
   shootSound: {fileID: 8300000, guid: 3b89e783e04cd4e61b121df1933ef887, type: 3}
   audioSource2: {fileID: 1605939092}
@@ -980,19 +984,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1961739538766989737, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.70710576
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1961739538766989737, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1961739538766989737, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.70710784
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1961739538766989737, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1961739538766989737, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1000,7 +1004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1961739538766989737, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 1961739538766989737, guid: d622f0e7df77e074bbccfa8fb4d8237b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
