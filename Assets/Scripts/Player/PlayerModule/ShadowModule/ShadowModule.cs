@@ -65,6 +65,8 @@ public class ShadowModule : PlayerModule
 
     public override void OnDeactivate()
     {
+        base.OnDeactivate();
+        
         ReleaseModule(default);
         DestroyProjector();
     }

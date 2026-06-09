@@ -32,6 +32,9 @@ public class ShockModuleSO : PlayerModuleSO
         ShockModuleUI module_ui = ui_instance.GetComponent<ShockModuleUI>();
         module_ui.module_instance = shock_module;
         
+        // store UI reference in module for later deactivation
+        shock_module.SetUIInstance(ui_instance);
+        
         return shock_module;
     }
 
@@ -50,5 +53,8 @@ public class ShockModuleSO : PlayerModuleSO
         GameObject ui_instance = MonoBehaviour.Instantiate(ui_element, ui_holder.transform);
         ShockModuleUI module_ui = ui_instance.GetComponent<ShockModuleUI>();
         module_ui.module_instance = (ShockModule)player_module;
+        
+        // store UI reference in module for later deactivation
+        player_module.SetUIInstance(ui_instance);
     }
 }

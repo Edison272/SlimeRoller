@@ -38,6 +38,17 @@ public class ShockModule : PlayerModule
         }
     }
 
+    public override void OnDeactivate()
+    {
+        base.OnDeactivate();
+        
+        // unsubscribe input handler
+        if (player != null && player.player_ability != null)
+        {
+            player.player_ability.started -= UseModule;
+        }
+    }
+
     // on release, jump upwards and then reset charge
     public override void UseModule(InputAction.CallbackContext context)
     {
