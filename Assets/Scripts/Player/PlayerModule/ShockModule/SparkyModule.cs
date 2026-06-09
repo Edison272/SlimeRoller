@@ -8,6 +8,7 @@ public class ShockModule : PlayerModule
     public float curr_cooldown_time = 0;
     public readonly ShockModuleSO base_data;
     private Collider[] shock_colliders = new Collider[32];
+    private int uses = 0;
     public ShockModule(
         PlayerController player, 
         PlayerModuleSO base_data_so
@@ -18,6 +19,8 @@ public class ShockModule : PlayerModule
         // connect relevant inputs
         player.player_ability.started += UseModule;
         // connect other information functions
+        
+        uses = base_data.max_uses;
     }
 
     // update functions are called by the player.
@@ -26,6 +29,7 @@ public class ShockModule : PlayerModule
     }
     public override void UpdateModule()
     {
+        
         if (curr_cooldown_time > 0)
         {
             curr_cooldown_time = Math.Max(
@@ -75,6 +79,14 @@ public class ShockModule : PlayerModule
 
         // VFX
         shockwave_instance.transform.localScale = Vector3.one * base_data.shock_radius;
+
+        // destroy this module after using it enough times
+        uses -= 1;
+        if (uses <= 0)
+        {
+           player.SetModule(base_data.default_module);
+        }
+
     }
 
     # region Get Data

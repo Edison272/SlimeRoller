@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3365208355778996760}
   - component: {fileID: 580640961304133312}
   - component: {fileID: 8280548780555152785}
+  - component: {fileID: 7083315148240704573}
   m_Layer: 0
   m_Name: JumpMode
   m_TagString: Player
@@ -129,6 +130,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AbilityCollectible
   moduleSO: {fileID: 11400000, guid: ef69d58b5c5950040aecef367c3bbd85, type: 2}
   destroyOnPickup: 1
+--- !u!114 &7083315148240704573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349240972496900458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10cbd648d76a24e36b1d1c929326d0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectableEffect
+  SpinSpeed: 90
+  FloatAmplitude: 0.15
+  FloatFrequency: 0.5
+  UseLocalPosition: 1
 --- !u!1 &2051312534719574097
 GameObject:
   m_ObjectHideFlags: 0
