@@ -56,7 +56,7 @@ public class LaserArray : MonoBehaviour
                 {
                     // Using the material Eyes for now as a 'reflective surface'
                     // Do we want to use materials to determine whether they can reflect?  Or something else
-                    if (rend.material.name.Contains("Eyes") && reflectionCount <= numBounces)
+                    if (rend.material.name.Contains("ChromeCube") && reflectionCount <= numBounces)
                     {
                         distance -= output.distance;
                         Debug.Log(Vector3.Reflect(dir.normalized, output.normal).normalized);
@@ -64,8 +64,8 @@ public class LaserArray : MonoBehaviour
                         return;
                     }
                     // Maybe make it an else if statement
-                    //if (output.collider.TryGetComponent(out PlayerController target) )
-                    //{
+                    if (output.collider.TryGetComponent(out PlayerController target) && !rend.material.name.Contains("ChromeCube"))
+                    {
                         // Call the kill player function here
                         //target.OnDeath();
                     //}

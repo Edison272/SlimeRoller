@@ -55,7 +55,7 @@ public class Laser : Toggleable
                         return;
                     }
                     // Maybe make it an else if statement
-                    if (output.collider.TryGetComponent(out PlayerController target))
+                    if (output.collider.TryGetComponent(out PlayerController target)  && !rend.material.name.Contains("ChromeCube"))
                     {
                         // Call the kill player function here
                         target.OnDeath();

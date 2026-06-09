@@ -219,8 +219,8 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = respawnPoint;
         yield return new WaitForSeconds(1);
-        Transform checkpoint = Checkpoint.set_respawn_transform;
-        player_rb.MovePosition(checkpoint.position);
+        //Transform checkpoint = Checkpoint.set_respawn_transform;
+        player_rb.MovePosition(respawnPoint);
         player_state = PlayerState.OnGround;
         DeathParticles.Play();
         ToggleVFX(true);
