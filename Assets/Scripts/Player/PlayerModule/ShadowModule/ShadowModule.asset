@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44dec030f9928d940873f7da0838ef80, type: 3}
+  m_Name: ShadowModule
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowModuleSO
+  ui_element: {fileID: 3783300857396107755, guid: 72f66261444542a43892039628674fb8, type: 3}
+  cooldownTime: 5
+  activeDuration: 3
+  reconstructionParticlePrefab: {fileID: 1677803712601383593, guid: 72ce53a4a7e645f47a6e4afdc89ba9fe, type: 3}
+  shadowProjectorPrefab: {fileID: 3464761365186015880, guid: 3d66a6c45305b284e850390923152f7c, type: 3}
+  shadowProjectorOffset: {x: 0, y: 1, z: 0}

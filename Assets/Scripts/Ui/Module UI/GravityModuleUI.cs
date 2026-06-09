@@ -30,5 +30,5 @@ public class GravityModuleUI : MonoBehaviour
             ProgressBar.transform.localScale = new Vector3(0,1,1);
             BarText.text = "Gravity Inactive";
         }
-    }
+    } 
 }

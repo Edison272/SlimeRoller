@@ -19,13 +19,21 @@ public class DroneAI : MonoBehaviour
     // manage attack speed
     [SerializeField] private float attack_speed = 0.1f;
     [SerializeField] private float attack_time = 0;
+    [SerializeField] private float attack_delay = 2.5f;
 
     [SerializeField] private BoltShooter drone_shooter;
     [SerializeField] private float hover_height = 3.0f;
+    [SerializeField] private float patrol_speed = 3.5f;
+    
+    private float attack_delay_timer = 0f;
     private NavMeshAgent agent;
     private int currentWaypoint = 0;
     private float visionDistance;
     private float visionAngle;
+
+    private bool isStunned = false;
+    private float stun_timer = 0f;
+    private float stun_duration;
 
     // audio
     public AudioSource audioSource;
@@ -39,6 +47,7 @@ public class DroneAI : MonoBehaviour
     {
         // NavMeshAgent setup and first destination
         agent = GetComponent<NavMeshAgent>();
+        agent.speed = patrol_speed;
 
         if (waypoints.Length > 0)
         {
@@ -60,6 +69,18 @@ public class DroneAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isStunned)
+        {
+            stun_timer += Time.deltaTime;
+            if (stun_timer >= stun_duration)
+            {
+                isStunned = false;
+                agent.isStopped = false;
+                currentState = DroneState.Patrol;
+            }
+            return;
+        }
+        
         switch (currentState)
         {
             // Patrol State
@@ -135,6 +156,7 @@ public class DroneAI : MonoBehaviour
             agent.ResetPath();
             ChangeAmbientSound(alarmSound);
             SetDroneLights(Color.red);
+            attack_delay_timer = 0f;
             currentState = DroneState.Attack;
         }
     }
@@ -159,6 +181,12 @@ public class DroneAI : MonoBehaviour
         directionToPlayer.y = 0;
         Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+
+        if (attack_delay_timer < attack_delay)
+        {
+            attack_delay_timer += Time.deltaTime;
+            return;
+        }
 
         if (Time.time >= attack_time)
         {
@@ -185,5 +213,16 @@ public class DroneAI : MonoBehaviour
         audioSource2.clip = clip;
         audioSource2.loop = true;
         audioSource2.Play();
+    }
+
+    public void Stun(float duration)
+    {
+        isStunned = true;
+        stun_duration = duration;
+        stun_timer = 0f;
+        agent.isStopped = true;
+
+        visionCone.color = Color.blue;
+        SetDroneLights(Color.blue);
     }
 }

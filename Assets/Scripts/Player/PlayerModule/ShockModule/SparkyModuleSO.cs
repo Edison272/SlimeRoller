@@ -13,6 +13,7 @@ public class ShockModuleSO : PlayerModuleSO
     public float shock_radius = 5;
     public LayerMask shock_mask;
     public GameObject shockwave_prefab;
+    public float stun_time = 3f;
 
     // create module class instance, 
     public override PlayerModule CreateModuleData(
