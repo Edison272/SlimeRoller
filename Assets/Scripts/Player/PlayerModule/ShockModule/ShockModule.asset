@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: ShockModule
   m_EditorClassIdentifier: Assembly-CSharp::ShockModuleSO
   ui_element: {fileID: 4446644189142558269, guid: d4739258eed2cd241829822558f2fe2e, type: 3}
+  membrane_material: {fileID: 2100000, guid: ce6a7470eb0ad3b4f976d2f9f804352d, type: 2}
+  core_material: {fileID: 2100000, guid: 251cabc3232f73442b87f2e7fb4fa74a, type: 2}
+  slime_glow: {r: 0, g: 0.88171387, b: 1, a: 0}
   cooldown_time: 3
   shock_radius: 10
   shock_mask:

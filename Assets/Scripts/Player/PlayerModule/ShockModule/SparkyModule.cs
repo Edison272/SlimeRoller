@@ -1,4 +1,5 @@
 using System;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class ShockModule : PlayerModule
@@ -7,7 +8,6 @@ public class ShockModule : PlayerModule
     public float curr_cooldown_time = 0;
     public readonly ShockModuleSO base_data;
     private Collider[] shock_colliders = new Collider[32];
-    private GameObject shockwave_instance;
     public ShockModule(
         PlayerController player, 
         PlayerModuleSO base_data_so
@@ -15,8 +15,6 @@ public class ShockModule : PlayerModule
     {
         // set base_data
         base_data = (ShockModuleSO)base_data_so;
-        shockwave_instance = MonoBehaviour.Instantiate(base_data.shockwave_prefab, player.transform.position, Quaternion.identity);
-
         // connect relevant inputs
         player.player_ability.started += UseModule;
         // connect other information functions
@@ -59,6 +57,8 @@ public class ShockModule : PlayerModule
             
         }
         curr_cooldown_time += base_data.cooldown_time;
+        GameObject shockwave_instance = MonoBehaviour.Instantiate(base_data.shockwave_prefab, player.transform.position, Quaternion.identity);
+        MonoBehaviour.Destroy(shockwave_instance, 3);
 
         // VFX
         shockwave_instance.transform.localScale = Vector3.one * base_data.shock_radius;

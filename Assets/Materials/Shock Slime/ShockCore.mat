@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SlimeCore
+  m_Name: ShockCore
   m_Shader: {fileID: -6465566751694194690, guid: 7c5a158dc676bdc4f947d0a8cc1cb68f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -95,15 +95,17 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DistortionIntensity: 0.424
-    - _DistortionSize: 253.51
+    - _DistortionDensity: 500
+    - _DistortionIntensity: 0.5
+    - _DistortionSize: 0.5
     - _DistortionStrength: 648
-    - _DistortionTimer: 0.1
+    - _DistortionTimer: 0.03
     - _Distortion_Strength: 0.1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _Fill: 0.66
+    - _FresnelStrength: 3.24
     - _Fresnel_Strength: 3.99
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -137,8 +139,9 @@ Material:
     - _DistortionMinMaxIntensity: {r: 0.2, g: 0.7, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Fill_Amount: {r: 0, g: 0, b: 0, a: 0}
+    - _FresnelColor: {r: 8, g: 8, b: 8, a: 1}
     - _LiquidColor: {r: 0.104947075, g: 0, b: 2.861805, a: 1}
-    - _ShockColor: {r: 0, g: 1.3832455, b: 4, a: 1}
+    - _ShockColor: {r: 0, g: 16, b: 14.634029, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SurfaceColor: {r: 5.1086273, g: 0, b: 16.262468, a: 1}
   m_BuildTextureStacks: []
