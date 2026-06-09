@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     // Player Components
     public GameObject SlimeMembrane;
     public GameObject SlimeCore;
+    public Light SlimeLight;
     public ParticleSystem DeathParticles;
 
     // all parts of the slime VFX are to be kept track of
@@ -72,16 +73,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         // set player ability starting module
-        PlayerModule new_module = null;
-        if (UIController.Instance)
-        {
-            new_module = module_so.CreateModuleData(this, UIController.Instance.MainCanvas.gameObject);
-        }
-        else
-        {
-            new_module = module_so.CreateModuleData(this);
-        }
-        active_module = new_module;
+        SetModule(module_so);
 
         respawnPoint = transform.position;
         // disable default cursor
@@ -128,9 +120,15 @@ public class PlayerController : MonoBehaviour
             new_module = newModuleSO.CreateModuleData(this);
         }
 
+
         // replace active module and store reference to the SO
         active_module = new_module;
         module_so = newModuleSO;
+
+        // set VFX
+        SlimeMembrane.GetComponent<MeshRenderer>().material = module_so.membrane_material;
+        SlimeCore.GetComponent<MeshRenderer>().material = module_so.core_material;
+        SlimeLight.color = module_so.slime_glow;
     }
 
     void FixedUpdate()
