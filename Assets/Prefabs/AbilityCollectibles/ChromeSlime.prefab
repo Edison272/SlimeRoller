@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac48318221ef745999f2386cf444a7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilityCollectible
-  moduleSO: {fileID: 0}
+  moduleSO: {fileID: 11400000, guid: 6d7292f5530caeb4a906922914020a77, type: 2}
   destroyOnPickup: 1
 --- !u!198 &8538937828602933105
 ParticleSystem:
