@@ -64,11 +64,11 @@ public class LaserArray : MonoBehaviour
                         return;
                     }
                     // Maybe make it an else if statement
-                    if (output.collider.TryGetComponent(out PlayerController target))
-                    {
+                    //if (output.collider.TryGetComponent(out PlayerController target) )
+                    //{
                         // Call the kill player function here
-                        target.OnDeath();
-                    }
+                        //target.OnDeath();
+                    //}
                 }
                 return;
             }
