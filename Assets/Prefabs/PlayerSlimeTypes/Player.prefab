@@ -5436,7 +5436,7 @@ Rigidbody:
   m_GameObject: {fileID: 8550802063414007684}
   serializedVersion: 5
   m_Mass: 10
-  m_LinearDamping: 1
+  m_LinearDamping: 3
   m_AngularDamping: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -5514,8 +5514,8 @@ MonoBehaviour:
   player_rb: {fileID: 6572512271369336788}
   SlimeMembrane: {fileID: 8550802063414007684}
   SlimeCore: {fileID: 5088660447118107153}
+  SlimeLight: {fileID: 136912877267149745}
   DeathParticles: {fileID: 5196285347916940740}
   AllVFX:
   - {fileID: 5088660447118107153}
-  module_type: 0
   module_so: {fileID: 11400000, guid: fed04e1b3743c470381dc7bfab39da06, type: 2}

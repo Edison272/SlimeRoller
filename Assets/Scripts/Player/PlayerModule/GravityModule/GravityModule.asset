@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: GravityModule
   m_EditorClassIdentifier: Assembly-CSharp::GravityModuleSO
   ui_element: {fileID: 4446644189142558269, guid: 627ff9ec46db8ba4faca2904a92ae5c8, type: 3}
+  membrane_material: {fileID: 2100000, guid: f28d3c4231100454c86cee6596588608, type: 2}
+  core_material: {fileID: 2100000, guid: 251cabc3232f73442b87f2e7fb4fa74a, type: 2}
+  slime_glow: {r: 0.93276596, g: 0, b: 1, a: 1}
   pullRadius: 8
   pullStrength: 20
   orbitRadius: 2

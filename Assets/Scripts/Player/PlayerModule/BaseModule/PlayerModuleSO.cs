@@ -11,6 +11,11 @@ public abstract class PlayerModuleSO : ScriptableObject
     // UI element
     public GameObject ui_element;
 
+    // set slime VFX
+    public Material membrane_material;
+    public Material core_material;
+    public Color slime_glow;
+
     // create module class instance, 
     public abstract PlayerModule CreateModuleData(
         PlayerController player, 
