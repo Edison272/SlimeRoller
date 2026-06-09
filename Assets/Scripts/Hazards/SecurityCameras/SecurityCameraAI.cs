@@ -103,6 +103,7 @@ public class SecurityCameraAI : MonoBehaviour
         if (InVisionCone())
         {
             attack_delay_timer = 0f;
+            ChangeAmbientSound(alarmSound);
             currentState = CameraState.Attack;
             return;
         }

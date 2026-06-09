@@ -4,8 +4,9 @@ using UnityEditor;
 public class LaserArray : MonoBehaviour
 {
     public LineRenderer lineRenderer;
+    public AudioSource audioSource;
+    public AudioClip laserSound;
     [SerializeField] private LayerMask ignoreMask;
-
     [SerializeField] private int numBounces = 0;
 
     private bool laserEnabled = true; // Variable to hold the laser distance so it can be re-enabled
@@ -17,11 +18,13 @@ public class LaserArray : MonoBehaviour
             lineRenderer = GetComponent<LineRenderer>();
         }
     }
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         lineRenderer.positionCount = numBounces + 2;
+        audioSource.clip = laserSound;
+        audioSource.Play();
     }
 
     // Update is called once per frame
@@ -102,7 +105,7 @@ public class LaserArray : MonoBehaviour
         }
         if (lineRenderer.positionCount != transform.childCount)
         {
-           SetupLineRenderer();
+        SetupLineRenderer();
         }
     }
 }
