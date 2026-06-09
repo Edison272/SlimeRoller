@@ -4,7 +4,7 @@ using TMPro;
 public class LoadingScreenUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI levelNameText;
-    [SerializeField] private string fallbackLabel = "Loading...";
+    [SerializeField] private string fallbackLabel = "Entering somewhere?";
 
     private void Awake()
     {
@@ -14,8 +14,8 @@ public class LoadingScreenUI : MonoBehaviour
         }
 
         string nextLevelName = SceneTransitionData.NextLevelName;
-        levelNameText.text = string.IsNullOrEmpty(nextLevelName)
+        levelNameText.text = "Entering " + (string.IsNullOrEmpty(nextLevelName)
             ? fallbackLabel
-            : nextLevelName;
+            : nextLevelName);
     }
 }
