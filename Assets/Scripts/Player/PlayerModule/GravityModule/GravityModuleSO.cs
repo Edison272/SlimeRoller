@@ -28,6 +28,9 @@ public class GravityModuleSO : PlayerModuleSO
         GravityModuleUI module_ui = ui_instance.GetComponent<GravityModuleUI>();
         module_ui.module_instance = gravity_module;
         
+        // store UI reference in module for later deactivation
+        gravity_module.SetUIInstance(ui_instance);
+        
         return gravity_module;
     }
 
@@ -45,5 +48,8 @@ public class GravityModuleSO : PlayerModuleSO
         GameObject ui_instance = MonoBehaviour.Instantiate(ui_element, ui_holder.transform);
         GravityModuleUI module_ui = ui_instance.GetComponent<GravityModuleUI>();
         module_ui.module_instance = (GravityModule)player_module;
+        
+        // store UI reference in module for later deactivation
+        player_module.SetUIInstance(ui_instance);
     }
 }

@@ -23,6 +23,9 @@ public class ChromeModuleSO : PlayerModuleSO
         ChromeModuleUI module_ui = ui_instance.GetComponent<ChromeModuleUI>();
         module_ui.module_instance = chrome_module;
         
+        // store UI reference in module for later deactivation
+        chrome_module.SetUIInstance(ui_instance);
+        
         return chrome_module;
     }
 
@@ -40,5 +43,8 @@ public class ChromeModuleSO : PlayerModuleSO
         GameObject ui_instance = MonoBehaviour.Instantiate(ui_element, ui_holder.transform);
         ChromeModuleUI module_ui = ui_instance.GetComponent<ChromeModuleUI>();
         module_ui.module_instance = (ChromeModule)player_module;
+        
+        // store UI reference in module for later deactivation
+        player_module.SetUIInstance(ui_instance);
     }
 }

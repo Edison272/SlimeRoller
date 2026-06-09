@@ -26,6 +26,9 @@ public class JumpModuleSO : PlayerModuleSO
         JumpModuleUI module_ui = ui_instance.GetComponent<JumpModuleUI>();
         module_ui.module_instance = jump_module;
         
+        // store UI reference in module for later deactivation
+        jump_module.SetUIInstance(ui_instance);
+        
         return jump_module;
     }
 
@@ -44,5 +47,8 @@ public class JumpModuleSO : PlayerModuleSO
         GameObject ui_instance = MonoBehaviour.Instantiate(ui_element, ui_holder.transform);
         JumpModuleUI module_ui = ui_instance.GetComponent<JumpModuleUI>();
         module_ui.module_instance = (JumpModule)player_module;
+        
+        // store UI reference in module for later deactivation
+        player_module.SetUIInstance(ui_instance);
     }
 }

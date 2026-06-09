@@ -23,6 +23,8 @@ public class JumpModule : PlayerModule
 
     public override void OnDeactivate()
     {
+        base.OnDeactivate();
+        
         // unsubscribe input handlers to avoid orphaned callbacks
         if (player != null && player.player_ability != null)
         {

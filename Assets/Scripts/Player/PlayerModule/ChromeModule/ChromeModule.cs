@@ -21,6 +21,8 @@ public class ChromeModule : PlayerModule
 
     public override void OnDeactivate()
     {
+        base.OnDeactivate();
+        
         // unsubscribe input handlers and clear state
         if (player != null && player.player_ability != null)
         {

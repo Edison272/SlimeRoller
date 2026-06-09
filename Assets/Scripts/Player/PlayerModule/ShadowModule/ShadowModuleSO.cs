@@ -27,6 +27,9 @@ public class ShadowModuleSO : PlayerModuleSO
         ShadowModuleUI module_ui = ui_instance.GetComponent<ShadowModuleUI>();
         module_ui.module_instance = shadow_module;
         
+        // store UI reference in module for later deactivation
+        shadow_module.SetUIInstance(ui_instance);
+        
         return shadow_module;
     }
 
