@@ -68,16 +68,17 @@ public class LaserArray : MonoBehaviour
                     {
                         // Call the kill player function here
                         //target.OnDeath();
-                    //}
+                        //}
+                    }
+                    return;
                 }
-                return;
             }
-        }
 
-        // If not, set the line to the rest
-        lineRenderer.SetPosition(reflectionCount, collision);
-        lineRenderer.SetPosition(reflectionCount + 1, collision + dir.normalized * distance);
-        lineRenderer.positionCount = reflectionCount + 2;
+            // If not, set the line to the rest
+            lineRenderer.SetPosition(reflectionCount, collision);
+            lineRenderer.SetPosition(reflectionCount + 1, collision + dir.normalized * distance);
+            lineRenderer.positionCount = reflectionCount + 2;
+        }
     }
 
     public void SetupLineRenderer()
