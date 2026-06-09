@@ -70,7 +70,7 @@ public class LaserArray : MonoBehaviour
                     if (output.collider.TryGetComponent(out PlayerController target) && !rend.material.name.Contains("ChromeMembrane"))
                     {
                         // Call the kill player function here
-                        target.OnDeath();
+                        //target.OnDeath();
                         //}
                     }
                     return;

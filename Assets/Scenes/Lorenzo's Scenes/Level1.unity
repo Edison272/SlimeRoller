@@ -12874,6 +12874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePlate
       objectReference: {fileID: 0}
+    - target: {fileID: 5354117054802453238, guid: 42fec3e55e96c2f49922d1e70bd764e2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6669519674445041873, guid: 42fec3e55e96c2f49922d1e70bd764e2, type: 3}
       propertyPath: m_IsTrigger
       value: 1
