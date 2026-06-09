@@ -12,7 +12,6 @@ public class LaserBolt : MonoBehaviour
         Debug.DrawLine(transform.position, transform.position + direction * lifeTime * speed, Color.red, 3000f);
         
         direction = transform.forward;
-        Debug.Log(direction);
 
         float checkRadius = 0.05f;
         if (Physics.CheckSphere(transform.position, checkRadius, wallMask))

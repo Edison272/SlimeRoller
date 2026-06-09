@@ -52,8 +52,10 @@ public class ShockModule : PlayerModule
             base_data.shock_mask);
 
         // Iterate through detected colliders and send the AddDamage message.
-        foreach (Collider target in shock_colliders)
+        for (int i = 0; i < numColliders; i++)
         {
+            GameObject target = shock_colliders[i].gameObject;
+            Debug.Log(target.gameObject);
             DroneAI drone_ai = target.gameObject.GetComponent<DroneAI>();
             if(drone_ai)
             {

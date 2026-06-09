@@ -20,5 +20,6 @@ MonoBehaviour:
   shock_radius: 10
   shock_mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   shockwave_prefab: {fileID: 3600021466149593237, guid: e0e64624a39589f419c94d4e0d24ae1c, type: 3}
+  stun_time: 3
