@@ -15,6 +15,10 @@ public class ShockModuleSO : PlayerModuleSO
     public GameObject shockwave_prefab;
     public float stun_time = 3f;
 
+    // shock module is SINGLE USE. we should refactor this later
+    public int max_uses = 1;
+    public PlayerModuleSO default_module; 
+
     // create module class instance, 
     public override PlayerModule CreateModuleData(
         PlayerController player, 
