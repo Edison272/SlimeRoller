@@ -12,14 +12,28 @@ public class DroneAI : MonoBehaviour
     public Transform eyePoint;
     public Transform player;
     public GameObject laserPrefab;
-    public float timePerAttack = 0.5f;
 
-    private float attackTimer;
+    public Light[] droneLights;
+    private Color patrolLightColor = new Color32(255, 148, 0, 255);
+
+    // manage attack speed
+    [SerializeField] private float attack_speed = 0.1f;
+    [SerializeField] private float attack_time = 0;
+
+    [SerializeField] private BoltShooter drone_shooter;
+    [SerializeField] private float hover_height = 3.0f;
     private NavMeshAgent agent;
     private int currentWaypoint = 0;
     private float visionDistance;
     private float visionAngle;
-    
+
+    // audio
+    public AudioSource audioSource;
+    public AudioClip shootSound;
+    public AudioSource audioSource2;
+    public AudioClip droneSound;
+    public AudioClip alarmSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,6 +49,12 @@ public class DroneAI : MonoBehaviour
         visionDistance = visionCone.range;
         visionAngle = visionCone.spotAngle;
         visionCone.color = Color.yellow;
+
+        // Play drone sound
+        audioSource2.clip = droneSound;
+        audioSource2.loop = true;
+        audioSource2.spatialBlend = 1f;
+        audioSource2.Play();
     }
 
     // Update is called once per frame
@@ -46,14 +66,27 @@ public class DroneAI : MonoBehaviour
             case DroneState.Patrol:
                 GetComponent<Renderer>().material = patrolMaterial;
                 visionCone.color = Color.yellow;
+                SetDroneLights(patrolLightColor);
                 Patrol();
                 break;
             // Attack State
             case DroneState.Attack:
                 GetComponent<Renderer>().material = attackMaterial;
                 visionCone.color = Color.red;
+                SetDroneLights(Color.red);
                 Attack();
                 break;
+        }
+    }
+
+    void SetDroneLights(Color color)
+    {
+        foreach (Light light in droneLights)
+        {
+            if (light != null)
+            {
+                light.color = color;
+            }
         }
     }
     
@@ -74,7 +107,7 @@ public class DroneAI : MonoBehaviour
             return false;
         }
 
-        if (Physics.Raycast(eyePoint.position, directionToPlayer.normalized, out RaycastHit hit, visionDistance))
+        if (Physics.Raycast(eyePoint.position, directionToPlayer.normalized, out RaycastHit hit, visionDistance, drone_shooter.collision_mask))
         {
             if (hit.collider.CompareTag("Player"))
             {
@@ -84,20 +117,11 @@ public class DroneAI : MonoBehaviour
         return false;
     }
 
-    void Shoot()
-    {
-        // shoot a laser towards the player
-        Vector3 directionToPlayer = player.position - eyePoint.position;
-        Quaternion rotation = Quaternion.LookRotation(directionToPlayer);
-        Instantiate(laserPrefab, eyePoint.position, rotation);
-    }
-
-
     void Patrol()
     {
         // Hover
         Vector3 hoverPosition = transform.position;
-        hoverPosition.y = 4.0f;
+        hoverPosition.y = hover_height;
         transform.position = hoverPosition;
         
         if(!agent.pathPending && agent.remainingDistance < 0.5f)
@@ -109,6 +133,8 @@ public class DroneAI : MonoBehaviour
         if (InVisionCone())
         {
             agent.ResetPath();
+            ChangeAmbientSound(alarmSound);
+            SetDroneLights(Color.red);
             currentState = DroneState.Attack;
         }
     }
@@ -117,12 +143,14 @@ public class DroneAI : MonoBehaviour
     {
         // Hover
         Vector3 hoverPosition = transform.position;
-        hoverPosition.y = 4.0f;
+        hoverPosition.y = hover_height;
         transform.position = hoverPosition;
 
         if (!InVisionCone())
         {
             agent.SetDestination(waypoints[currentWaypoint].position);
+            SetDroneLights(patrolLightColor);
+            ChangeAmbientSound(droneSound);
             currentState = DroneState.Patrol;
             return;
         }
@@ -132,11 +160,30 @@ public class DroneAI : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
 
-        if (Time.time >= timePerAttack)
+        if (Time.time >= attack_time)
         {
             Shoot();
-            timePerAttack = Time.time + timePerAttack;
+            attack_time = Time.time + attack_speed;
         }
 
+    }
+    void Shoot()
+    {
+        // shoot a laser towards the player
+        Vector3 directionToPlayer = player.position - eyePoint.position;
+        Quaternion rotation = Quaternion.LookRotation(directionToPlayer.normalized);
+        drone_shooter.ShootLaser(directionToPlayer, eyePoint.position);
+        audioSource.PlayOneShot(shootSound);
+    }
+
+    void ChangeAmbientSound(AudioClip clip)
+    {
+        if (audioSource2.clip == clip)
+            return;
+
+        audioSource2.Stop();
+        audioSource2.clip = clip;
+        audioSource2.loop = true;
+        audioSource2.Play();
     }
 }

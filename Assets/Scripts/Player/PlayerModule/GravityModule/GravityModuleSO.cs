@@ -24,9 +24,9 @@ public class GravityModuleSO : PlayerModuleSO
         GravityModule gravity_module = new GravityModule(player, this);
         
         // set up ui instance
-        // GameObject ui_instance = MonoBehaviour.Instantiate(ui_element, ui_holder.transform);
-        // GravityModuleUI module_ui = ui_instance.GetComponent<GravityModuleUI>();
-        // module_ui.module_instance = gravity_module;
+        GameObject ui_instance = MonoBehaviour.Instantiate(ui_element, ui_holder.transform);
+        GravityModuleUI module_ui = ui_instance.GetComponent<GravityModuleUI>();
+        module_ui.module_instance = gravity_module;
         
         return gravity_module;
     }
@@ -42,8 +42,8 @@ public class GravityModuleSO : PlayerModuleSO
         GameObject ui_holder
         )
     {
-        // GameObject ui_instance = MonoBehaviour.Instantiate(ui_element, ui_holder.transform);
-        // GravityModuleUI module_ui = ui_instance.GetComponent<GravityModuleUI>();
-        // module_ui.module_instance = (GravityModule)player_module;
+        GameObject ui_instance = MonoBehaviour.Instantiate(ui_element, ui_holder.transform);
+        GravityModuleUI module_ui = ui_instance.GetComponent<GravityModuleUI>();
+        module_ui.module_instance = (GravityModule)player_module;
     }
 }

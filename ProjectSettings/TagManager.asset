@@ -9,6 +9,7 @@ TagManager:
   - Ramp
   - Crate
   - ShadowPlayer
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,8 @@ TagManager:
   - UI
   - Ground
   - Particles
-  - 
+  - Walls
+  - Projectile
   - 
   - 
   - 
