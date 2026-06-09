@@ -49,6 +49,9 @@ public class PlayerController : MonoBehaviour
     // Player States - accessed by external scripts
     public bool on_ground {get; private set;} = false;
 
+    // Respawn Info
+    private Vector3 respawnPoint;
+
 
 
     void Awake()
@@ -79,7 +82,8 @@ public class PlayerController : MonoBehaviour
             new_module = module_so.CreateModuleData(this);
         }
         active_module = new_module;
-        
+
+        respawnPoint = transform.position;
         // disable default cursor
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -215,7 +219,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Respawn()
     {
-        // return to previous checkpoint
+        transform.position = respawnPoint;
         yield return new WaitForSeconds(1);
         Transform checkpoint = Checkpoint.set_respawn_transform;
         player_rb.MovePosition(checkpoint.position);

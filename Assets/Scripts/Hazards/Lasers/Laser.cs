@@ -58,6 +58,7 @@ public class Laser : Toggleable
                     if (output.collider.TryGetComponent(out PlayerController target))
                     {
                         // Call the kill player function here
+                        target.OnDeath();
                     }
                 }
                 return;

@@ -148,8 +148,9 @@ LineRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Positions:
+  - {x: -1.871, y: 0, z: 1.364}
+  - {x: -1.33, y: 0, z: -1.6}
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -221,6 +222,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   lineRenderer: {fileID: 1157095768063794622}
+  ignoreMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &9082463952711704855
 GameObject:
   m_ObjectHideFlags: 0
