@@ -8,6 +8,7 @@ TagManager:
   - Hazard
   - Ramp
   - Crate
+  - ShadowPlayer
   - Bullet
   layers:
   - Default
@@ -17,6 +18,7 @@ TagManager:
   - Water
   - UI
   - Ground
+  - Particles
   - Walls
   - Projectile
   - 
