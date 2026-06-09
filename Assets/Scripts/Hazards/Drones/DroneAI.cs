@@ -19,9 +19,12 @@ public class DroneAI : MonoBehaviour
     // manage attack speed
     [SerializeField] private float attack_speed = 0.1f;
     [SerializeField] private float attack_time = 0;
+    [SerializeField] private float attack_delay = 2.5f;
 
     [SerializeField] private BoltShooter drone_shooter;
     [SerializeField] private float hover_height = 3.0f;
+    
+    private float attack_delay_timer = 0f;
     private NavMeshAgent agent;
     private int currentWaypoint = 0;
     private float visionDistance;
@@ -135,6 +138,7 @@ public class DroneAI : MonoBehaviour
             agent.ResetPath();
             ChangeAmbientSound(alarmSound);
             SetDroneLights(Color.red);
+            attack_delay_timer = 0f;
             currentState = DroneState.Attack;
         }
     }
@@ -159,6 +163,12 @@ public class DroneAI : MonoBehaviour
         directionToPlayer.y = 0;
         Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+
+        if (attack_delay_timer < attack_delay)
+        {
+            attack_delay_timer += Time.deltaTime;
+            return;
+        }
 
         if (Time.time >= attack_time)
         {
