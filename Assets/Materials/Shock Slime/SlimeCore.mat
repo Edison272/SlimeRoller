@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SlimeCore
-  m_Shader: {fileID: -6465566751694194690, guid: 002fffaac1debb641a10b68d9566346d, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 7c5a158dc676bdc4f947d0a8cc1cb68f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -16,7 +16,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
@@ -95,6 +95,11 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
+    - _DistortionIntensity: 0.424
+    - _DistortionSize: 253.51
+    - _DistortionStrength: 648
+    - _DistortionTimer: 0.1
+    - _Distortion_Strength: 0.1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
@@ -129,9 +134,11 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.2113316, g: 1, b: 0, a: 1}
     - _Color: {r: 0.21133158, g: 1, b: 0, a: 1}
+    - _DistortionMinMaxIntensity: {r: 0.2, g: 0.7, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Fill_Amount: {r: 0, g: 0, b: 0, a: 0}
     - _LiquidColor: {r: 0.104947075, g: 0, b: 2.861805, a: 1}
+    - _ShockColor: {r: 0, g: 1.3832455, b: 4, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SurfaceColor: {r: 5.1086273, g: 0, b: 16.262468, a: 1}
   m_BuildTextureStacks: []

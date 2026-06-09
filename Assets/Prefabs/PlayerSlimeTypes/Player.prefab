@@ -5144,7 +5144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8704e036c3da4c2479603f8e834892a9, type: 2}
+  - {fileID: 2100000, guid: 251cabc3232f73442b87f2e7fb4fa74a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5364,7 +5364,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8550802063414007684}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5518,4 +5518,5 @@ MonoBehaviour:
   DeathParticles: {fileID: 5196285347916940740}
   AllVFX:
   - {fileID: 5088660447118107153}
+  module_type: 0
   module_so: {fileID: 11400000, guid: fed04e1b3743c470381dc7bfab39da06, type: 2}
