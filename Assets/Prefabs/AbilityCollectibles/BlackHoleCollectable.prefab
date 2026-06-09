@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.5519037, y: 5.5519037, z: 5.5519037}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3976658041241497648}
@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 3976658041241497648}
   - component: {fileID: 8469990523066528022}
   - component: {fileID: 8269391225157832217}
+  - component: {fileID: 3918073417519518477}
   m_Layer: 0
   m_Name: BlackHoleCollectable
   m_TagString: Untagged
@@ -144,9 +145,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6642682289303705200}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2.57, z: 3.11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 7.672294, y: 7.672294, z: 7.672294}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1544118684217567345}
@@ -171,7 +172,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8269391225157832217
 MonoBehaviour:
@@ -187,3 +188,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AbilityCollectible
   moduleSO: {fileID: 11400000, guid: fed04e1b3743c470381dc7bfab39da06, type: 2}
   destroyOnPickup: 1
+--- !u!114 &3918073417519518477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6642682289303705200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10cbd648d76a24e36b1d1c929326d0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectableEffect
+  SpinSpeed: 90
+  FloatAmplitude: 0.15
+  FloatFrequency: 0.5
+  UseLocalPosition: 1
