@@ -4,8 +4,6 @@ using UnityEditor;
 public class LaserArray : MonoBehaviour
 {
     public LineRenderer lineRenderer;
-    public AudioSource audioSource;
-    public AudioClip laserSound;
     [SerializeField] private LayerMask ignoreMask;
     [SerializeField] private int numBounces = 0;
 
@@ -23,8 +21,6 @@ public class LaserArray : MonoBehaviour
     void Start()
     {
         lineRenderer.positionCount = numBounces + 2;
-        audioSource.clip = laserSound;
-        audioSource.Play();
     }
 
     // Update is called once per frame
