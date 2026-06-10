@@ -36,6 +36,13 @@ public class GravityModule : PlayerModule
         }
         gravityActive = false;
         affectedObjects.Clear();
+
+        if (player != null && player.audioSource != null && player.audioSource.clip == base_data.activationSound)
+        {
+            player.audioSource.Stop();
+            player.audioSource.clip = null;
+            player.audioSource.loop = false;
+        }
     }
 
     // update functions are called by the player.
@@ -97,11 +104,24 @@ public class GravityModule : PlayerModule
     {
         gravityActive = false;
         affectedObjects.Clear();
+
+        if (player.audioSource != null && player.audioSource.clip == base_data.activationSound)
+        {
+            player.audioSource.Stop();
+            player.audioSource.clip = null;
+            player.audioSource.loop = false;
+        }
     }
 
     public override void UseModule(InputAction.CallbackContext context)
     {
         gravityActive = true;
+        if (base_data.activationSound != null && player.audioSource != null && !player.audioSource.isPlaying)
+        {
+            player.audioSource.clip = base_data.activationSound;
+            player.audioSource.loop = true;
+            player.audioSource.Play();
+        }
     }
     public virtual int GetGravityTargets()
     {

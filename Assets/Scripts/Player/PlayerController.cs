@@ -49,9 +49,8 @@ public class PlayerController : MonoBehaviour
 
     // Player States - accessed by external scripts
     public bool on_ground { get; private set; } = false;
-
     public AudioSource audioSource;
-    public AudioClip rollSound;
+    public AudioSource loopSource;
 
     void Awake()
     {
@@ -61,9 +60,19 @@ public class PlayerController : MonoBehaviour
         // set player input stuff
         if (!player_input) { player_input = GetComponent<PlayerInput>(); }
 
-        if (!audioSource)
+        if (!audioSource && !loopSource)
         {
-            audioSource = GetComponent<AudioSource>();
+            AudioSource source = GetComponent<AudioSource>();
+            audioSource = source;
+            loopSource = source;
+        }
+        else if (!audioSource)
+        {
+            audioSource = loopSource;
+        }
+        else if (!loopSource)
+        {
+            loopSource = audioSource;
         }
 
         player_ability = player_input.actions["Ability"];
@@ -102,24 +111,6 @@ public class PlayerController : MonoBehaviour
         }
 
         active_module.UpdateModule();
-        
-        // if (player_rb.linearVelocity != Vector3.zero)
-        // {
-        //     if(!audioSource.isPlaying)
-        //     {
-        //         audioSource.clip = rollSound;
-        //         audioSource.loop = true;
-        //         audioSource.spatialBlend = 1f;
-        //         audioSource.Play();
-        //     }
-        // }
-        // else
-        // {
-        //     if(!audioSource.isPlaying)
-        //     {
-        //         audioSource.Stop();
-        //     }
-        // }
     }
 
     // allow external objects (pickups, etc.) to switch the player's active module

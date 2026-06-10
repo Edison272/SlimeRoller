@@ -22,6 +22,8 @@ public class JumpModule : PlayerModule
         // connect other information functions
     }
 
+    private bool wasGrounded = true;
+    private bool jumped = false;
     public override void OnDeactivate()
     {
         base.OnDeactivate();
@@ -37,6 +39,18 @@ public class JumpModule : PlayerModule
     // update functions are called by the player.
     public override void FixedUpdateModule()
     {
+        if (jumped && !wasGrounded && player.on_ground)
+        {
+            if (base_data.deactivationSound != null &&
+                player.audioSource != null)
+            {
+                player.audioSource.PlayOneShot(base_data.deactivationSound);
+            }
+            jumped = false;
+        }
+
+        wasGrounded = player.on_ground;
+
         if (!player.on_ground)
         {
             return;
@@ -65,11 +79,15 @@ public class JumpModule : PlayerModule
         {
             return;
         }
-
+        if (base_data.activationSound != null && player.audioSource != null)
+        {
+            player.audioSource.PlayOneShot(base_data.activationSound);
+        }
         float jump_scale = base_data.jump_scale * curr_charge_time;
         float base_jump_amt = base_data.base_jump_amt;
         float jump_power = base_jump_amt + jump_scale;
         player.ApplyImpulse(Vector2.up, jump_power);
+        jumped = true;
         curr_charge_time = 0;
     }
 

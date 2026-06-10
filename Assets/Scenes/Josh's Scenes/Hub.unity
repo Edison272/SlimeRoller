@@ -3067,6 +3067,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9069351229980459568, guid: 40e79f50e646e27448d161a9c9437173, type: 3}
   m_PrefabInstance: {fileID: 501907500}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &504254720 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 886988971760505762, guid: c39a907507b27d54488310526d056155, type: 3}
+  m_PrefabInstance: {fileID: 1800294002}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &529771324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11803,18 +11808,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 791985754657637673, guid: c39a907507b27d54488310526d056155, type: 3}
-      propertyPath: m_Enabled
-      value: 1
+    - target: {fileID: 886988971760505762, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: free_cam
       value: 
       objectReference: {fileID: 2116746078}
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
-      propertyPath: module_so
+      propertyPath: loopSource
       value: 
-      objectReference: {fileID: 11400000, guid: 74a7d518bc06e1d479c5103195ec7647, type: 2}
+      objectReference: {fileID: 504254720}
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: main_camera
       value: 
@@ -11822,10 +11827,6 @@ PrefabInstance:
     - target: {fileID: 8550802063414007684, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8550802063414007684, guid: c39a907507b27d54488310526d056155, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9094167528356318514, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: m_LocalPosition.x

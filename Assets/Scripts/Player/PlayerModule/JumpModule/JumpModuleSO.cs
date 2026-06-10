@@ -12,6 +12,9 @@ public class JumpModuleSO : PlayerModuleSO
     public float max_charge_time = 2;
     public float jump_scale = 60;
     public float base_jump_amt = 60;
+    public AudioClip activationSound;
+    public AudioClip deactivationSound;
+
 
     // create module class instance, 
     public override PlayerModule CreateModuleData(

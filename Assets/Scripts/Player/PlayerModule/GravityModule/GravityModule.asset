@@ -22,3 +22,4 @@ MonoBehaviour:
   orbitRadius: 2
   orbitStrength: 10
   liftStrength: 20
+  activationSound: {fileID: 8300000, guid: fa2c52e1e09f11d46a4245b1b26d5921, type: 3}

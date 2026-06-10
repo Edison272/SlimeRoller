@@ -22,6 +22,12 @@ public class ShockModule : PlayerModule
         // connect other information functions
         
         uses = base_data.max_uses;
+        if (base_data.electricSound != null && player.loopSource != null)
+        {
+            player.loopSource.clip = base_data.electricSound;
+            player.loopSource.loop = true;
+            player.loopSource.Play();
+        }
     }
 
     // update functions are called by the player.
@@ -42,7 +48,14 @@ public class ShockModule : PlayerModule
     public override void OnDeactivate()
     {
         base.OnDeactivate();
-        
+
+        if (player != null && player.loopSource != null && player.loopSource.clip == base_data.electricSound)
+        {
+            player.loopSource.Stop();
+            player.loopSource.clip = null;
+            player.loopSource.loop = false;
+        }
+
         // unsubscribe input handler
         if (player != null && player.player_ability != null)
         {
@@ -53,6 +66,13 @@ public class ShockModule : PlayerModule
     // on release, jump upwards and then reset charge
     public override void UseModule(InputAction.CallbackContext context)
     {
+        if (player.loopSource != null && player.loopSource.clip == base_data.electricSound)
+        {
+            player.loopSource.Stop();
+            player.loopSource.clip = null;
+            player.loopSource.loop = false;
+        }
+
         if (curr_cooldown_time > 0)
         {
             return;

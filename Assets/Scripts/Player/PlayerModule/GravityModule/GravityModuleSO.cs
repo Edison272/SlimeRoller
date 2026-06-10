@@ -14,6 +14,7 @@ public class GravityModuleSO : PlayerModuleSO
     public float orbitRadius = 3;
     public float orbitStrength = 20;
     public float liftStrength = 5;
+    public AudioClip activationSound;
 
     // create module class instance, 
     public override PlayerModule CreateModuleData(

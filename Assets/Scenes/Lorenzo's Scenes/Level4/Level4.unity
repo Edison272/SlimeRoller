@@ -18325,6 +18325,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 886988971760505762, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: free_cam
       value: 
@@ -18333,6 +18337,10 @@ PrefabInstance:
       propertyPath: rollSound
       value: 
       objectReference: {fileID: 8300000, guid: 3a2a25dad4e55c24f965711d1282ac49, type: 3}
+    - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: loopSource
+      value: 
+      objectReference: {fileID: 1802951705}
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: audioSource
       value: 
@@ -18393,6 +18401,11 @@ PrefabInstance:
 --- !u!82 &1802951704 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7589071401752501234, guid: c39a907507b27d54488310526d056155, type: 3}
+  m_PrefabInstance: {fileID: 1802951703}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1802951705 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 886988971760505762, guid: c39a907507b27d54488310526d056155, type: 3}
   m_PrefabInstance: {fileID: 1802951703}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1810340931

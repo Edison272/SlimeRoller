@@ -20,3 +20,5 @@ MonoBehaviour:
   max_charge_time: 2
   jump_scale: 80
   base_jump_amt: 60
+  activationSound: {fileID: 8300000, guid: e9e384548e3edad46a4999524c98fdc1, type: 3}
+  deactivationSound: {fileID: 8300000, guid: 908c0ce5772051c4fbf46f271e83a374, type: 3}

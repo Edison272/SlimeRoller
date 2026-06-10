@@ -15667,10 +15667,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 886988971760505762, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: free_cam
       value: 
       objectReference: {fileID: 1810340937}
+    - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: loopSource
+      value: 
+      objectReference: {fileID: 1802951704}
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: audioSource
       value: 
@@ -15732,6 +15740,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c39a907507b27d54488310526d056155, type: 3}
+--- !u!82 &1802951704 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 886988971760505762, guid: c39a907507b27d54488310526d056155, type: 3}
+  m_PrefabInstance: {fileID: 1802951703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1808678056
 PrefabInstance:
   m_ObjectHideFlags: 0

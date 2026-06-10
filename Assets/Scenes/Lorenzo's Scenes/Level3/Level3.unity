@@ -4800,7 +4800,7 @@ Transform:
   m_GameObject: {fileID: 623688315}
   serializedVersion: 2
   m_LocalRotation: {x: 0.22980344, y: -1.519194e-11, z: 3.5871631e-12, w: 0.9732371}
-  m_LocalPosition: {x: 18.96, y: 8.642, z: -3.5900002}
+  m_LocalPosition: {x: 1.2016343e-10, y: 2.6949992, z: -28.848999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11180,6 +11180,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: e340dc9308bc84984b6b63ab53db9d40, type: 2}
+    - target: {fileID: 886988971760505762, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2291533884179538826, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -11196,6 +11200,10 @@ PrefabInstance:
       propertyPath: module_so
       value: 
       objectReference: {fileID: 11400000, guid: ef69d58b5c5950040aecef367c3bbd85, type: 2}
+    - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: loopSource
+      value: 
+      objectReference: {fileID: 1802951705}
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: audioSource
       value: 
@@ -11264,6 +11272,11 @@ PrefabInstance:
 --- !u!82 &1802951704 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7589071401752501234, guid: c39a907507b27d54488310526d056155, type: 3}
+  m_PrefabInstance: {fileID: 1802951703}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1802951705 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 886988971760505762, guid: c39a907507b27d54488310526d056155, type: 3}
   m_PrefabInstance: {fileID: 1802951703}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1807744700
