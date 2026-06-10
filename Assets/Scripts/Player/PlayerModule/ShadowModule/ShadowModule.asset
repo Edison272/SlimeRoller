@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: ShadowModule
   m_EditorClassIdentifier: Assembly-CSharp::ShadowModuleSO
   ui_element: {fileID: 3783300857396107755, guid: 72f66261444542a43892039628674fb8, type: 3}
+  membrane_material: {fileID: 2100000, guid: 5b8697f3ca21c2845b63eba02e19e1c6, type: 2}
+  core_material: {fileID: 2100000, guid: 91a3061b1749fdc4284fc8eb18cf1049, type: 2}
+  slime_glow: {r: 0, g: 0, b: 0, a: 0}
   cooldownTime: 5
   activeDuration: 3
   reconstructionParticlePrefab: {fileID: 1677803712601383593, guid: 72ce53a4a7e645f47a6e4afdc89ba9fe, type: 3}
