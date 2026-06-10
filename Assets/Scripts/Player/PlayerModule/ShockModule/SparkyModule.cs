@@ -57,7 +57,12 @@ public class ShockModule : PlayerModule
         {
             return;
         }
-        
+
+        if (base_data.activationSound != null && player.audioSource != null)
+        {
+            player.audioSource.PlayOneShot(base_data.activationSound);
+        }
+
         /* Reuse the pre-allocated array for Physics.OverlapSphereNonAlloc.
         Find all shockable targets within range (mask)
         */

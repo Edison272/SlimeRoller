@@ -24,5 +24,6 @@ MonoBehaviour:
     m_Bits: 1
   shockwave_prefab: {fileID: 3600021466149593237, guid: e0e64624a39589f419c94d4e0d24ae1c, type: 3}
   stun_time: 3
+  activationSound: {fileID: 8300000, guid: b802a398d5fa59d489cdd1b5b1b29f49, type: 3}
   max_uses: 1
   default_module: {fileID: 11400000, guid: ef69d58b5c5950040aecef367c3bbd85, type: 2}
