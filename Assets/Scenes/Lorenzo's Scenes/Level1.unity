@@ -10249,6 +10249,10 @@ PrefabInstance:
       propertyPath: pauseDuration
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7591468388183596389, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0013936758
+      objectReference: {fileID: 0}
     - target: {fileID: 7790061808633005223, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: m_Name
       value: SecurityCamera (1)
