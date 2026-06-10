@@ -9,6 +9,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject creditsPanel;
 
+    [SerializeField] private TextMeshProUGUI volumeValueText;
+
     public void OnPlayButtonPressed()
     {
         SceneManager.LoadScene("Hub");
@@ -39,4 +41,11 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void OnVolumeChanged(float value)
+    {
+        GameManager.Instance.Volume = value;
+        volumeValueText.text = Mathf.RoundToInt(value * 100).ToString();
+    }
+
 }
