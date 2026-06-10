@@ -13,6 +13,8 @@ public class ShadowModuleSO : PlayerModuleSO
     public GameObject reconstructionParticlePrefab;
     public GameObject shadowProjectorPrefab;
     public Vector3 shadowProjectorOffset = new Vector3(0f, 0.05f, 0f);
+    public AudioClip activationSound;
+    public AudioClip deactivationSound;
 
     // create module class instance, 
     public override PlayerModule CreateModuleData(

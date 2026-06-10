@@ -16,8 +16,11 @@ MonoBehaviour:
   membrane_material: {fileID: 2100000, guid: 5b8697f3ca21c2845b63eba02e19e1c6, type: 2}
   core_material: {fileID: 2100000, guid: 91a3061b1749fdc4284fc8eb18cf1049, type: 2}
   slime_glow: {r: 0, g: 0, b: 0, a: 0}
+  speed_multiplier: 1
   cooldownTime: 5
   activeDuration: 3
   reconstructionParticlePrefab: {fileID: 1677803712601383593, guid: 72ce53a4a7e645f47a6e4afdc89ba9fe, type: 3}
   shadowProjectorPrefab: {fileID: 3464761365186015880, guid: 3d66a6c45305b284e850390923152f7c, type: 3}
   shadowProjectorOffset: {x: 0, y: 1, z: 0}
+  activationSound: {fileID: 8300000, guid: a9832eef983bca9478480a4a35f666c3, type: 3}
+  deactivationSound: {fileID: 8300000, guid: 8d67e18125d77f14da21b20839bb59fc, type: 3}

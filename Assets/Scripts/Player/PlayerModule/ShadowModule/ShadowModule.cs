@@ -32,7 +32,7 @@ public class ShadowModule : PlayerModule
     {
         base_data = (ShadowModuleSO)base_data_so;
         base_data.SetPlayerStats(player);
-        
+
         cooldownTime = base_data.cooldownTime;
         activeDuration = base_data.activeDuration;
         timeSinceUse = cooldownTime;
@@ -68,13 +68,23 @@ public class ShadowModule : PlayerModule
     public override void OnDeactivate()
     {
         base.OnDeactivate();
-        
+
         ReleaseModule(default);
         DestroyProjector();
     }
 
     public virtual void ReleaseModule(InputAction.CallbackContext context)
     {
+        if (!shadowActive)
+        {
+            return;
+        }
+
+        if (base_data.deactivationSound != null && player.audioSource != null)
+        {
+            player.audioSource.PlayOneShot(base_data.deactivationSound);
+        }
+
         PlayReconstructionVFX();
         if (shadowRoutine != null)
         {
@@ -101,6 +111,12 @@ public class ShadowModule : PlayerModule
 
         shadowActive = true;
         timeSinceUse = 0f;
+
+        if (base_data.activationSound != null && player.audioSource != null)
+        {
+            player.audioSource.PlayOneShot(base_data.activationSound);
+        }
+
         HidePlayerRenderers();
         EnsureProjectorInstance();
         SetProjectorActive(true);

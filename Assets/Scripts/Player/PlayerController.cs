@@ -5,17 +5,17 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public enum PlayerState {Dead, OnGround, Jumping}
+public enum PlayerState { Dead, OnGround, Jumping }
 public class PlayerController : MonoBehaviour
 {
     // Input System
     public PlayerInput player_input;
     public InputAction player_ability;
-    
+
     // Camera Control
     public Camera main_camera;
     public CinemachineCamera free_cam;
-    
+
     // Movement values
     Vector2 move_dir = Vector2.zero;
     float forward_accel = 0;
@@ -48,26 +48,30 @@ public class PlayerController : MonoBehaviour
     public PlayerModuleSO starting_module;
 
     // Player States - accessed by external scripts
-    public bool on_ground {get; private set;} = false;
+    public bool on_ground { get; private set; } = false;
 
-    // Sound Effects
-
-
+    public AudioSource audioSource;
 
     void Awake()
     {
         // get local components if they don't exist
-        if (!player_rb) {player_rb = GetComponent<Rigidbody>();}
+        if (!player_rb) { player_rb = GetComponent<Rigidbody>(); }
 
         // set player input stuff
-        if (!player_input) {player_input = GetComponent<PlayerInput>();}
+        if (!player_input) { player_input = GetComponent<PlayerInput>(); }
+
+        if (!audioSource)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
+
         player_ability = player_input.actions["Ability"];
 
         curr_speed = base_speed;
 
         true_look_dir = SlimeCore.transform.forward;
     }
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -88,7 +92,7 @@ public class PlayerController : MonoBehaviour
         // rotate inner core to face the movement direction
         if (move_dir != Vector2.zero)
         {
-            Vector3 rotate_to_dir = forward_accel * cam_look_dir + sideways_accel * (Quaternion.Euler(0,90,0) * cam_look_dir).normalized;
+            Vector3 rotate_to_dir = forward_accel * cam_look_dir + sideways_accel * (Quaternion.Euler(0, 90, 0) * cam_look_dir).normalized;
             true_look_dir = Vector3.Slerp(true_look_dir, rotate_to_dir, Time.deltaTime * body_rotate_speed);
         }
         if (true_look_dir != Vector3.zero)
@@ -134,24 +138,24 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // constantly set the player's movement based on the accel values
-        player_rb.AddForce(cam_look_dir * forward_accel + sideways_accel * (Quaternion.Euler(0,90,0) * cam_look_dir).normalized);
-    
+        player_rb.AddForce(cam_look_dir * forward_accel + sideways_accel * (Quaternion.Euler(0, 90, 0) * cam_look_dir).normalized);
+
         // check if player is on the ground
         RaycastHit ground_touch;
         on_ground = Physics.Raycast(
-            transform.position, 
+            transform.position,
             Vector3.down,
             out ground_touch,
-            transform.localScale.y/1.9f,
+            transform.localScale.y / 1.9f,
             ground_check_mask
             );
         if (on_ground)
         {
             Debug.DrawLine(transform.position, ground_touch.point, Color.green);
-        } 
+        }
         else
         {
-            Debug.DrawLine(transform.position, transform.position + Vector3.down * (transform.localScale.y/1.9f), Color.red);
+            Debug.DrawLine(transform.position, transform.position + Vector3.down * (transform.localScale.y / 1.9f), Color.red);
         }
 
         // check if player has fallen off the map
@@ -162,7 +166,7 @@ public class PlayerController : MonoBehaviour
 
         // update ability if necessary
         active_module.FixedUpdateModule();
-        
+
     }
 
     // update the accel values on input
@@ -220,7 +224,7 @@ public class PlayerController : MonoBehaviour
         if (!intentional)
         {
             EventBus.Singleton.PlayerDeath?.Invoke();
-        }   
+        }
         ToggleVFX(false);
         DeathParticles.Play();
         StartCoroutine(Respawn());
