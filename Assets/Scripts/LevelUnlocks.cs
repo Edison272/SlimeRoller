@@ -10,8 +10,8 @@ public class LevelUnlocks : MonoBehaviour
     private void Start()
     {
         if (!isDoor)
-        {
-            if (GameManager.Instance.HighestLevel >= levelIndexToUnlock)
+        {            
+            if (!GameManager.Instance || GameManager.Instance.HighestLevel >= levelIndexToUnlock)
             {
                 gameObjectToUnlock.SetActive(activityUponUnlock);
             }
@@ -22,7 +22,7 @@ public class LevelUnlocks : MonoBehaviour
         }
         if (isDoor)
         {
-            if (GameManager.Instance.HighestLevel >= levelIndexToUnlock)
+            if (!GameManager.Instance || GameManager.Instance.HighestLevel >= levelIndexToUnlock)
             {
                 gameObjectToUnlock.GetComponent<Door>().enabled = true;
                 gameObjectToUnlock.GetComponent<Collider>().enabled = true;

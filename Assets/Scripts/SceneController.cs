@@ -50,6 +50,7 @@ public class SceneController : MonoBehaviour
             yield return null;
         }
 
+        Debug.Log(LoadingSceneName);
         yield return SceneManager.UnloadSceneAsync(LoadingSceneName);
         SceneTransitionData.Clear();
     }

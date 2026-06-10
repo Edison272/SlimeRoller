@@ -287,4 +287,10 @@ public class PlayerController : MonoBehaviour
     }
 
     #endregion
+
+    private void OnDestroy()
+    {
+        // disconnect module from input action methods before destroying the player
+        active_module.OnDeactivate();
+    }
 }
