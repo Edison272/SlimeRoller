@@ -50,8 +50,12 @@ public class SceneController : MonoBehaviour
             yield return null;
         }
 
-        Debug.Log(LoadingSceneName);
-        yield return SceneManager.UnloadSceneAsync(LoadingSceneName);
+        Debug.Log("BANDAID FIX HERE");
+        if (SceneManager.GetSceneByName(LoadingSceneName).isLoaded)
+        {
+            yield return SceneManager.UnloadSceneAsync(LoadingSceneName);
+        }
+        
         SceneTransitionData.Clear();
     }
 
