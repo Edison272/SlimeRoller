@@ -11786,9 +11786,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16f82b0364fed446b71a2214329dbab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  HubSceneName: Josh HubWorld
-  LoadingSceneName: Josh LoadingScreen
-  MinLoadingScreenTime: 3
+  HubSceneName: Hub
+  LoadingSceneName: Loading
+  MinLoadingScreenTime: 1
 --- !u!4 &1835518424
 Transform:
   m_ObjectHideFlags: 0

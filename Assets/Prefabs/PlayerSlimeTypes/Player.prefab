@@ -5059,7 +5059,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8704e036c3da4c2479603f8e834892a9, type: 2}
+  - {fileID: 2100000, guid: c65325f08aca16940a5a4e624ae8719d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5642,7 +5642,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f28d3c4231100454c86cee6596588608, type: 2}
+  - {fileID: 2100000, guid: c65325f08aca16940a5a4e624ae8719d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5780,4 +5780,4 @@ MonoBehaviour:
   - {fileID: 5088660447118107153}
   starting_module: {fileID: 11400000, guid: ef69d58b5c5950040aecef367c3bbd85, type: 2}
   audioSource: {fileID: 7589071401752501234}
-  rollSound: {fileID: 0}
+  loopSource: {fileID: 0}
