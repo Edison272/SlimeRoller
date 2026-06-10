@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10cbd648d76a24e36b1d1c929326d0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectableEffect
-  SpinSpeed: 100
+  SpinSpeed: 90
   FloatAmplitude: 0.15
   FloatFrequency: 0.5
   UseLocalPosition: 1
