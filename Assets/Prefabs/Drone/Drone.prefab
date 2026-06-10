@@ -973,6 +973,7 @@ MonoBehaviour:
   - {fileID: 1325623852772147103}
   attack_speed: 0.2
   attack_time: 0
+  attack_delay: 1.5
   drone_shooter:
     collision_mask:
       serializedVersion: 2
@@ -980,6 +981,7 @@ MonoBehaviour:
     laser_bolt: {fileID: 378952252949305711, guid: 83f43046c2fd2274ebbb42b002cc337c, type: 3}
     inaccuracy: 2
   hover_height: 3
+  patrol_speed: 3.5
   audioSource: {fileID: 6276649773166899581}
   shootSound: {fileID: 8300000, guid: 3b89e783e04cd4e61b121df1933ef887, type: 3}
   audioSource2: {fileID: 3295261372979890684}

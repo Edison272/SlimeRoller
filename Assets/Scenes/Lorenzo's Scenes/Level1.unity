@@ -741,7 +741,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 5c761c06e61f3408f8e82b37cf6aeb2a, type: 3}
     - target: {fileID: 7176257828375786617, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: attack_delay
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7176257828375786617, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: pauseDuration
@@ -10520,7 +10520,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 5c761c06e61f3408f8e82b37cf6aeb2a, type: 3}
     - target: {fileID: 7176257828375786617, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: attack_delay
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7176257828375786617, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: pauseDuration
@@ -14595,7 +14595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7176257828375786617, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: attack_delay
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7176257828375786617, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: pauseDuration
@@ -16768,7 +16768,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 5c761c06e61f3408f8e82b37cf6aeb2a, type: 3}
     - target: {fileID: 7176257828375786617, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: attack_delay
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7176257828375786617, guid: b316edd45a44c4b028fe997b99fd583b, type: 3}
       propertyPath: attack_speed

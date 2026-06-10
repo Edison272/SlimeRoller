@@ -555,7 +555,7 @@ MonoBehaviour:
   laserPrefab: {fileID: 24567790706809978, guid: 83f43046c2fd2274ebbb42b002cc337c, type: 3}
   attack_speed: 0.1
   attack_time: 0
-  attack_delay: 2.5
+  attack_delay: 1.5
   drone_shooter:
     collision_mask:
       serializedVersion: 2
