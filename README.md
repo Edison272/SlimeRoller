@@ -27,6 +27,14 @@
 - `Spark Particles` - used in the EMP effect of the shock slime as well as the broken doors scene across various levels
 - `Shade Particles` - used by the Shade/Shadow/Ninja slime whenever they disappear and reappear from sight
 
+---
+
+## Assets
+- FireBolt Studios - Sci-Fi Texture Pack 1
+- G.Forge - Sci-Fi Interior Modular Kit
+- VoodooPlay - Low Poly Combat Drone
+- AK STUDIO ARt - Surveillance Camera
+
 ## Audio Assets
 
 ### Sound Effects:
@@ -39,4 +47,5 @@
 - Irving Heat - Stealth Music Beats
 - FilFar - Bitrack 
 
+---
 
