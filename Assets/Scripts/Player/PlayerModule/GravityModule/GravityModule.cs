@@ -58,7 +58,12 @@ public class GravityModule : PlayerModule
                 {
                     affectedObjects.Add(rb);
                 }
-
+            }
+            Debug.Log("bullet", obj);
+            if (obj.CompareTag("Bullet"))
+            {
+                
+                obj.transform.parent.GetComponent<LaserBolt>().speed /= 1.2f;
             }
         }
 

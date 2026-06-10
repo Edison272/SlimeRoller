@@ -50,9 +50,6 @@ public class PlayerController : MonoBehaviour
     // Player States - accessed by external scripts
     public bool on_ground {get; private set;} = false;
 
-    // Respawn Info
-    private Vector3 respawnPoint;
-
 
 
     void Awake()
@@ -74,8 +71,6 @@ public class PlayerController : MonoBehaviour
     {
         // set player ability starting module
         SetModule(starting_module);
-
-        respawnPoint = transform.position;
         // disable default cursor
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -94,7 +89,10 @@ public class PlayerController : MonoBehaviour
             Vector3 rotate_to_dir = forward_accel * cam_look_dir + sideways_accel * (Quaternion.Euler(0,90,0) * cam_look_dir).normalized;
             true_look_dir = Vector3.Slerp(true_look_dir, rotate_to_dir, Time.deltaTime * body_rotate_speed);
         }
-        SlimeCore.transform.forward = true_look_dir;
+        if (true_look_dir != Vector3.zero)
+        {
+            SlimeCore.transform.forward = true_look_dir;
+        }
 
         active_module.UpdateModule();
     }
@@ -206,6 +204,10 @@ public class PlayerController : MonoBehaviour
 
     public void OnDeath(bool intentional = false)
     {
+        if (player_state == PlayerState.Dead)
+        {
+            return;
+        }
         // reset movement
         player_rb.linearVelocity = Vector3.zero;
         forward_accel = 0;
@@ -226,10 +228,10 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Respawn()
     {
-        transform.position = respawnPoint;
-        yield return new WaitForSeconds(2);
-        //Transform checkpoint = Checkpoint.set_respawn_transform;
-        player_rb.MovePosition(respawnPoint);
+        yield return new WaitForSeconds(1);
+        Transform checkpoint = Checkpoint.set_respawn_transform;
+        player_rb.MovePosition(checkpoint.transform.position);
+        yield return new WaitForSeconds(1);
         player_state = PlayerState.OnGround;
         DeathParticles.Play();
         ToggleVFX(true);

@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2796159416791389195}
   - component: {fileID: 378952252949305711}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LaserBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,9 +62,9 @@ GameObject:
   - component: {fileID: 5068914810324862626}
   - component: {fileID: 5512997151660860689}
   - component: {fileID: 5591256424617113951}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LaserBulletVFX
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,7 +174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1443827852867479111}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
