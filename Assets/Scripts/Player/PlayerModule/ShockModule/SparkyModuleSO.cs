@@ -14,6 +14,7 @@ public class ShockModuleSO : PlayerModuleSO
     public LayerMask shock_mask;
     public GameObject shockwave_prefab;
     public float stun_time = 3f;
+    public AudioClip activationSound;
 
     // shock module is SINGLE USE. we should refactor this later
     public int max_uses = 1;

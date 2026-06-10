@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
         AudioListener.volume = volume;
     }
 
-    public int HighestLevel { get; private set; } = 0;
+    public int HighestLevel = 0;
 
     public void BeatLevel(int levelIndex)
     {

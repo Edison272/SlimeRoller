@@ -189,8 +189,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   lineRenderer: {fileID: 1157095768063794622}
-  audioSource: {fileID: 0}
-  laserSound: {fileID: 8300000, guid: 1cef566c29da9435497ee164cfd08fd6, type: 3}
   ignoreMask:
     serializedVersion: 2
     m_Bits: 384
