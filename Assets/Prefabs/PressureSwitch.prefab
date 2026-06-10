@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5152244205089120520
+--- !u!1 &4079034621111536014
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6336989647312722012}
-  - component: {fileID: 3257511814902369203}
-  - component: {fileID: 5321758320337287776}
-  - component: {fileID: 2131082474264910186}
-  - component: {fileID: 3868354520341624543}
-  - component: {fileID: 6821650789084272758}
-  m_Layer: 0
-  m_Name: ShadowCollect
+  - component: {fileID: 6255723986880935659}
+  - component: {fileID: 518096968557186275}
+  - component: {fileID: 8849586650725328756}
+  - component: {fileID: 8576134074684489559}
+  - component: {fileID: 5871233067017595906}
+  m_Layer: 7
+  m_Name: PressureSwitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6336989647312722012
+--- !u!4 &6255723986880935659
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5152244205089120520}
+  m_GameObject: {fileID: 4079034621111536014}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.77, y: 1.13, z: -17.63}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.86, y: 0.2, z: 5.1}
+  m_LocalScale: {x: 5, y: 0.4166667, z: 5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3257511814902369203
+--- !u!33 &518096968557186275
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5152244205089120520}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5321758320337287776
+  m_GameObject: {fileID: 4079034621111536014}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8849586650725328756
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5152244205089120520}
+  m_GameObject: {fileID: 4079034621111536014}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -69,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2625b610b0d074e409271afb4547252b, type: 2}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,13 +92,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2131082474264910186
-SphereCollider:
+--- !u!65 &8576134074684489559
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5152244205089120520}
+  m_GameObject: {fileID: 4079034621111536014}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -112,37 +111,19 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3868354520341624543
+--- !u!114 &5871233067017595906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5152244205089120520}
+  m_GameObject: {fileID: 4079034621111536014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac48318221ef745999f2386cf444a7be, type: 3}
+  m_Script: {fileID: 11500000, guid: 804ab0262801401459af00bf07d04a6a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AbilityCollectible
-  moduleSO: {fileID: 11400000, guid: 74a7d518bc06e1d479c5103195ec7647, type: 2}
-  destroyOnPickup: 1
-  respawnTime: 10
-  enableRespawn: 1
---- !u!114 &6821650789084272758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5152244205089120520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10cbd648d76a24e36b1d1c929326d0cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CollectableEffect
-  SpinSpeed: 100
-  FloatAmplitude: 0.15
-  FloatFrequency: 0.5
-  UseLocalPosition: 1
+  m_EditorClassIdentifier: '::'
+  objectList:
+  - {fileID: 0}

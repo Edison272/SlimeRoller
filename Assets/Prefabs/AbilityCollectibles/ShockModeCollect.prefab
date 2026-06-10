@@ -242,7 +242,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 2
-  m_Color: {r: 0.360193, g: 1, b: 0.1490196, a: 1}
+  m_Color: {r: 0, g: 0.9484322, b: 1, a: 1}
   m_Intensity: 3
   m_Range: 40
   m_SpotAngle: 30
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AbilityCollectible
   moduleSO: {fileID: 11400000, guid: 454741306ad285d4ea3bae2164a264b5, type: 2}
   destroyOnPickup: 1
-  respawnTime: 10
+  respawnTime: 30
   enableRespawn: 1
 --- !u!114 &5484095482403016710
 MonoBehaviour:
@@ -560,7 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10cbd648d76a24e36b1d1c929326d0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectableEffect
-  SpinSpeed: 90
+  SpinSpeed: 100
   FloatAmplitude: 0.25
   FloatFrequency: 1
   UseLocalPosition: 1
