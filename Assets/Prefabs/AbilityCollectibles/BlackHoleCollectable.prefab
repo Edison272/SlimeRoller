@@ -190,6 +190,7 @@ MonoBehaviour:
   destroyOnPickup: 1
   respawnTime: 10
   enableRespawn: 1
+  pickupSound: {fileID: 8300000, guid: f7307e84afeb6b34d9a40ab594e96003, type: 3}
 --- !u!114 &3918073417519518477
 MonoBehaviour:
   m_ObjectHideFlags: 0

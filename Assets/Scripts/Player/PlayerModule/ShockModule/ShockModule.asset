@@ -16,14 +16,14 @@ MonoBehaviour:
   membrane_material: {fileID: 2100000, guid: ce6a7470eb0ad3b4f976d2f9f804352d, type: 2}
   core_material: {fileID: 2100000, guid: 251cabc3232f73442b87f2e7fb4fa74a, type: 2}
   slime_glow: {r: 0, g: 0.88171387, b: 1, a: 0}
-  speed_multiplier: 1.8
+  speed_multiplier: 1.6
   cooldown_time: 3
-  shock_radius: 15
+  shock_radius: 10
   shock_mask:
     serializedVersion: 2
     m_Bits: 1
   shockwave_prefab: {fileID: 3600021466149593237, guid: e0e64624a39589f419c94d4e0d24ae1c, type: 3}
-  stun_time: 3
+  stun_time: 5
   activationSound: {fileID: 8300000, guid: b802a398d5fa59d489cdd1b5b1b29f49, type: 3}
   electricSound: {fileID: 8300000, guid: 7e87b8166784e8f42849087a56c78e2f, type: 3}
   max_uses: 1

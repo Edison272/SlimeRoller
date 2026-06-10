@@ -22,6 +22,7 @@ public class AbilityCollectible : MonoBehaviour
     private Collider collectibleCollider;
     private Renderer collectibleRenderer;
     private GameObject[] childObjects;
+    public AudioClip pickupSound;
 
     void Start()
     {
@@ -56,6 +57,11 @@ public class AbilityCollectible : MonoBehaviour
         if (moduleSO != null)
         {
             pc.SetModule(moduleSO);
+        }
+
+        if (pickupSound != null && pc.audioSource != null)
+        {
+            pc.audioSource.PlayOneShot(pickupSound);
         }
 
         if (destroyOnPickup)

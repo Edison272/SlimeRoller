@@ -16,7 +16,7 @@ MonoBehaviour:
   membrane_material: {fileID: 2100000, guid: f28d3c4231100454c86cee6596588608, type: 2}
   core_material: {fileID: 2100000, guid: 8704e036c3da4c2479603f8e834892a9, type: 2}
   slime_glow: {r: 0.36078432, g: 1, b: 0.14901961, a: 0}
-  speed_multiplier: 1.1
+  speed_multiplier: 1
   max_charge_time: 2
   jump_scale: 80
   base_jump_amt: 60
