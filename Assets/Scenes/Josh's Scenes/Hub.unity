@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0.5
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 1
@@ -4565,7 +4565,7 @@ Transform:
   m_GameObject: {fileID: 858872827}
   serializedVersion: 2
   m_LocalRotation: {x: 0.22975299, y: -0.000000028042717, z: 0.000000006619989, w: 0.973249}
-  m_LocalPosition: {x: -19.1, y: 3.27, z: -22.62}
+  m_LocalPosition: {x: 0, y: 3.76, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
