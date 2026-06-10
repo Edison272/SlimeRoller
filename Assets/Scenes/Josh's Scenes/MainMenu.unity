@@ -182,15 +182,7 @@ MonoBehaviour:
 
     Stanley Hung
 
-    Joshua Kim-Pearson
-
-
-    _______
-
-    _______
-
-
-    _______'
+    Joshua Kim-Pearson'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6508e8fddbfada447848152d862520c5, type: 2}
   m_sharedMaterial: {fileID: -3947777771614084777, guid: 6508e8fddbfada447848152d862520c5, type: 2}
@@ -217,8 +209,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 86
-  m_fontSizeBase: 86
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1913,6 +1905,14 @@ PrefabInstance:
       propertyPath: player_rb
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: loopSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8550802063414007684, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3144,6 +3144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9dfc0b447eb0e54e87efcac86212f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  musicSource: {fileID: 236270552}
+  menuTheme: {fileID: 8300000, guid: 90e4c07b93ca1ff408d3dace1aed5311, type: 3}
+  gameTheme: {fileID: 8300000, guid: a96bbb5cb44e90b4da0da6dbfa85663b, type: 3}
 --- !u!1001 &1191321996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6492,13 +6495,17 @@ MonoBehaviour:
 
     Music:
 
-    _______
+    Irving
+    Heat - Stealth Music Beats
 
-    _______
+    FilFar - Bitrack
 
     Assets:
 
-    _______'
+    FireBolt Studios
+    - Sci-Fi Texture Pack 1
+
+    G.Forge - Sci-Fi Interior Modular Kit'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6508e8fddbfada447848152d862520c5, type: 2}
   m_sharedMaterial: {fileID: -3947777771614084777, guid: 6508e8fddbfada447848152d862520c5, type: 2}
@@ -6525,8 +6532,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 86
-  m_fontSizeBase: 86
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

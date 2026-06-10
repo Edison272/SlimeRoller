@@ -1,18 +1,55 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class MusicManager : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
-    public static MusicManager Instance;
+    public static AudioManager instance;
+    public AudioSource musicSource;
+    public AudioClip menuTheme;
+    public AudioClip gameTheme;
 
-    private void Awake()
+    void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
         {
             Destroy(gameObject);
-            return;
         }
+    }
 
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+    void Start()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        PlayMusicForScene(SceneManager.GetActiveScene().name);
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        PlayMusicForScene(scene.name);
+    }
+
+    void PlayMusicForScene(string sceneName)
+    {
+        if (sceneName == "MainMenu")
+        {
+            Play(menuTheme);
+        }
+        else
+        {
+            Play(gameTheme);
+        }
+    }
+
+    void Play(AudioClip clip)
+    {
+        if (musicSource.clip == clip) return;
+
+        musicSource.clip = clip;
+        musicSource.loop = true;
+        musicSource.Play();
     }
 }

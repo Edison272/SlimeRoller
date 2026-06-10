@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
     public bool on_ground { get; private set; } = false;
     public AudioSource audioSource;
     public AudioSource loopSource;
+    public AudioClip death;
 
     void Awake()
     {
@@ -236,6 +237,7 @@ public class PlayerController : MonoBehaviour
             EventBus.Singleton.PlayerDeath?.Invoke();
         }
         ToggleVFX(false);
+        audioSource.PlayOneShot(death);
         DeathParticles.Play();
         StartCoroutine(Respawn());
 
