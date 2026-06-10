@@ -192,7 +192,7 @@ MonoBehaviour:
   ignoreMask:
     serializedVersion: 2
     m_Bits: 384
-  numBounces: 1
+  numBounces: 0
 --- !u!1 &9082463952711704855
 GameObject:
   m_ObjectHideFlags: 0
