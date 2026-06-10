@@ -26,11 +26,13 @@ public class LevelUnlocks : MonoBehaviour
             {
                 gameObjectToUnlock.GetComponent<Door>().enabled = true;
                 gameObjectToUnlock.GetComponent<Collider>().enabled = true;
+                gameObjectToUnlock.GetComponent<Door>().ToggleOn();
             }
             else
             {
                 gameObjectToUnlock.GetComponent<Door>().enabled = false;
                 gameObjectToUnlock.GetComponent<Collider>().enabled = false;
+                gameObjectToUnlock.GetComponent<Door>().ToggleOff();
             }
         }
     }
