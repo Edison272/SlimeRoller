@@ -3631,6 +3631,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265074515}
   m_CullTransparentMesh: 1
+--- !u!82 &266549747 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7589071401752501234, guid: c39a907507b27d54488310526d056155, type: 3}
+  m_PrefabInstance: {fileID: 1802951703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &277685573 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 133466439682988988, guid: c1dcc81e70aea3143ae73a4b88746a3e, type: 3}
@@ -15666,6 +15671,10 @@ PrefabInstance:
       propertyPath: free_cam
       value: 
       objectReference: {fileID: 1810340937}
+    - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 266549747}
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: main_camera
       value: 
