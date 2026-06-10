@@ -7682,7 +7682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1253627376
 Transform:
   m_ObjectHideFlags: 0
@@ -12443,17 +12443,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 574020627838286085, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+    - {fileID: 7772677819826520778, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2830787337587060434, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
     - {fileID: 8774564708920912262, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2741138660627176064, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2107358139}
+    - targetCorrespondingSourceObject: {fileID: 6047554607135935057, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2107358138}
   m_SourcePrefab: {fileID: 100100000, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
 --- !u!4 &2107358135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5881162709833894144, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
   m_PrefabInstance: {fileID: 2107358134}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2107358136 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6047554607135935057, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+  m_PrefabInstance: {fileID: 2107358134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2107358137 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2741138660627176064, guid: dc186893ec25ee143b1c69b39cb76839, type: 3}
+  m_PrefabInstance: {fileID: 2107358134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2107358138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107358136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320cce9b30c17964c8d6f9aa91bdb914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowObstacle
+--- !u!114 &2107358139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107358137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320cce9b30c17964c8d6f9aa91bdb914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowObstacle
 --- !u!1 &2108376790
 GameObject:
   m_ObjectHideFlags: 0
