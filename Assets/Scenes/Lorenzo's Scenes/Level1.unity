@@ -15607,6 +15607,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 886988971760505762, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: free_cam
       value: 
