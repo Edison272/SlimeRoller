@@ -50,6 +50,8 @@ public class PlayerController : MonoBehaviour
     // Player States - accessed by external scripts
     public bool on_ground {get; private set;} = false;
 
+    // Sound Effects
+
 
 
     void Awake()
