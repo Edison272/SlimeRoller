@@ -25,10 +25,12 @@ public class LevelUnlocks : MonoBehaviour
             if (GameManager.Instance.HighestLevel >= levelIndexToUnlock)
             {
                 gameObjectToUnlock.GetComponent<Door>().enabled = true;
+                gameObjectToUnlock.GetComponent<Collider>().enabled = true;
             }
             else
             {
                 gameObjectToUnlock.GetComponent<Door>().enabled = false;
+                gameObjectToUnlock.GetComponent<Collider>().enabled = false;
             }
         }
     }

@@ -97,7 +97,6 @@ public class ShockModule : PlayerModule
         {
             GameObject target = shock_colliders[i].gameObject;
             DroneAI drone_ai = target.gameObject.GetComponent<DroneAI>();
-            BigDroneAI big_drone_ai = target.gameObject.GetComponent<BigDroneAI>();
             SecurityCameraAI camera_ai = target.gameObject.GetComponent<SecurityCameraAI>();
 
             if (camera_ai)
@@ -108,11 +107,6 @@ public class ShockModule : PlayerModule
             if (drone_ai)
             {
                 drone_ai.Stun(base_data.stun_time);
-            }
-
-            if (big_drone_ai)
-            {
-                big_drone_ai.Stun(base_data.stun_time);
             }
         }
         curr_cooldown_time += base_data.cooldown_time;

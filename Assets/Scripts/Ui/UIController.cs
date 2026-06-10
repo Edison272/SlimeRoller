@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 public class UIController : MonoBehaviour
 {
     public static UIController Instance { get; private set; }
+    public AudioSource audioSource;
+    public AudioClip click;
 
     [field: SerializeField]
     public Canvas MainCanvas { get; private set; }
@@ -52,13 +54,23 @@ public class UIController : MonoBehaviour
 
     public void HomeButtonPressed()
     {
+        PlayClickSound();
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void ResetButtonPressed()
     {
+        PlayClickSound();
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void PlayClickSound()
+    {
+        if (audioSource != null && click != null)
+        {
+            audioSource.PlayOneShot(click);
+        }
     }
 }
