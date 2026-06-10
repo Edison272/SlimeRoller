@@ -7,7 +7,9 @@ public class PressureSwitch : MonoBehaviour
 
     private Material plateMaterial;
     private bool isOn = false;
-
+    public AudioSource audioSource;
+    public AudioClip on;
+    public AudioClip off;
     private void Start()
     {
         plateMaterial = GetComponent<Renderer>().material;
@@ -31,10 +33,12 @@ public class PressureSwitch : MonoBehaviour
             if (isOn)
             {
                 d.ToggleOn();
+                audioSource.PlayOneShot(on);
             }
             else
             {
                 d.ToggleOff();
+                audioSource.PlayOneShot(off);
             }
         }
 

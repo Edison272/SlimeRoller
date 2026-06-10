@@ -1913,6 +1913,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: player_input
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8550802063414007684, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1971,6 +1975,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6572512271369336788, guid: c39a907507b27d54488310526d056155, type: 3}
+    - {fileID: 4730847687833453625, guid: c39a907507b27d54488310526d056155, type: 3}
+    - {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2724921910220511764, guid: c39a907507b27d54488310526d056155, type: 3}
     - {fileID: 1432590835529098925, guid: c39a907507b27d54488310526d056155, type: 3}
@@ -3902,7 +3908,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Project Slime Roller
+  m_text: 'Project
+
+    Slime Roller'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 757430ca436dcc341932bc54b659c73b, type: 2}
   m_sharedMaterial: {fileID: -3947777771614084777, guid: 757430ca436dcc341932bc54b659c73b, type: 2}

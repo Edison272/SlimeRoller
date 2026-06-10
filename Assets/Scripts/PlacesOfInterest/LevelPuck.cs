@@ -5,6 +5,8 @@ public class LevelPuck : MonoBehaviour
     [SerializeField] private string LevelName;
     private SceneController sceneController;
     private bool playerHasEntered = false;
+    public AudioSource audioSource;
+    public AudioClip levelLoadSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,6 +20,7 @@ public class LevelPuck : MonoBehaviour
         {
             //Debug.Log("Player hit the level puck");
             sceneController.LoadLevel(LevelName);
+            audioSource.PlayOneShot(levelLoadSound);
             playerHasEntered = true;
         }
     }

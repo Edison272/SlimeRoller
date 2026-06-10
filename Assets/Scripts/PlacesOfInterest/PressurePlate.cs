@@ -11,8 +11,10 @@ public class PressurePlate : MonoBehaviour
     // Technically works with different GameObjects, but would need a standardized method to call between the types
     [SerializeField] private List<Toggleable> objectList;
     private int objectsOnPlate = 0;
-
     public Material plateMaterial;
+    public AudioSource audioSource;
+    public AudioClip on;
+    public AudioClip off;
 
     private void Start()
     {
@@ -36,6 +38,7 @@ public class PressurePlate : MonoBehaviour
             }
 
             plateMaterial.color = Color.green;
+            audioSource.PlayOneShot(on);
         }
     }
 
@@ -53,6 +56,7 @@ public class PressurePlate : MonoBehaviour
             }
 
             plateMaterial.color = Color.red;
+            audioSource.PlayOneShot(off);
         }
     }
 }
