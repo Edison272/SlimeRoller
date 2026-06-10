@@ -5436,7 +5436,7 @@ Rigidbody:
   m_GameObject: {fileID: 8550802063414007684}
   serializedVersion: 5
   m_Mass: 10
-  m_LinearDamping: 3
+  m_LinearDamping: 2
   m_AngularDamping: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -5518,5 +5518,4 @@ MonoBehaviour:
   DeathParticles: {fileID: 5196285347916940740}
   AllVFX:
   - {fileID: 5088660447118107153}
-  module_type: 0
-  module_so: {fileID: 11400000, guid: fed04e1b3743c470381dc7bfab39da06, type: 2}
+  starting_module: {fileID: 11400000, guid: ef69d58b5c5950040aecef367c3bbd85, type: 2}

@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     Vector2 move_dir = Vector2.zero;
     float forward_accel = 0;
     float sideways_accel = 0;
-    [SerializeField] float base_speed = 10;
+    [SerializeField] float base_speed = 100;
     [SerializeField] float curr_speed;
     public PlayerState player_state = PlayerState.OnGround;
     private LayerMask ground_check_mask = 1 << 6;
@@ -43,9 +43,9 @@ public class PlayerController : MonoBehaviour
     public GameObject[] AllVFX;
 
     // Player Module
-    public PlayerModuleType module_type;
     public PlayerModule active_module;
-    public PlayerModuleSO module_so;
+    private PlayerModuleSO module_so;
+    public PlayerModuleSO starting_module;
 
     // Player States - accessed by external scripts
     public bool on_ground {get; private set;} = false;
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         // set player ability starting module
-        SetModule(module_so);
+        SetModule(starting_module);
 
         respawnPoint = transform.position;
         // disable default cursor
@@ -190,6 +190,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    #region Getting and Setting Stats
+    public void SetCurrentSpeed(float speed_modifier)
+    {
+        curr_speed = base_speed * speed_modifier;
+    }
+    #endregion
+
     #region Death
     void OnReset(InputValue action)
     {
@@ -213,12 +220,14 @@ public class PlayerController : MonoBehaviour
         ToggleVFX(false);
         DeathParticles.Play();
         StartCoroutine(Respawn());
+
+        SetModule(starting_module);
     }
 
     IEnumerator Respawn()
     {
         transform.position = respawnPoint;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         //Transform checkpoint = Checkpoint.set_respawn_transform;
         player_rb.MovePosition(respawnPoint);
         player_state = PlayerState.OnGround;

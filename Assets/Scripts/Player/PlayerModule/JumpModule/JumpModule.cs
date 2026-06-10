@@ -14,6 +14,7 @@ public class JumpModule : PlayerModule
     {
         // set base_data
         base_data = (JumpModuleSO)base_data_so;
+        base_data.SetPlayerStats(player);
 
         // connect relevant inputs
         player.player_ability.canceled += UseModule;

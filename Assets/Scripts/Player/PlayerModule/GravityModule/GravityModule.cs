@@ -15,6 +15,7 @@ public class GravityModule : PlayerModule
     {
         // set base_data
         base_data = (GravityModuleSO)base_data_so;
+        base_data.SetPlayerStats(player);
 
         // connect relevant inputs
         player.player_ability.canceled += ReleaseModule;

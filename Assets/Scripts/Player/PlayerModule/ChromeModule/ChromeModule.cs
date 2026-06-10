@@ -13,6 +13,7 @@ public class ChromeModule : PlayerModule
     {
         // set base_data
         base_data = (ChromeModuleSO)base_data_so;
+        base_data.SetPlayerStats(player);
 
         chromeActive = true;
         

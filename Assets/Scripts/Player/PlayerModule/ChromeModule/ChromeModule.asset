@@ -16,3 +16,4 @@ MonoBehaviour:
   membrane_material: {fileID: 2100000, guid: c9135bcb0ee9c3d43bd301d1f129c69d, type: 2}
   core_material: {fileID: 2100000, guid: f45f13c7c24654f7591c44b4cd625c95, type: 2}
   slime_glow: {r: 1, g: 0, b: 0, a: 0}
+  speed_multiplier: 0.9

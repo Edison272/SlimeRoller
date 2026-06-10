@@ -16,6 +16,7 @@ public class ShockModule : PlayerModule
     {
         // set base_data
         base_data = (ShockModuleSO)base_data_so;
+        base_data.SetPlayerStats(player);
         // connect relevant inputs
         player.player_ability.started += UseModule;
         // connect other information functions
