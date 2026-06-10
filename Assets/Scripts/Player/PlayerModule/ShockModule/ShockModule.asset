@@ -18,7 +18,7 @@ MonoBehaviour:
   slime_glow: {r: 0, g: 0.88171387, b: 1, a: 0}
   speed_multiplier: 1.8
   cooldown_time: 3
-  shock_radius: 10
+  shock_radius: 15
   shock_mask:
     serializedVersion: 2
     m_Bits: 1

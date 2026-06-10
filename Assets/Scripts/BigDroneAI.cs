@@ -94,13 +94,16 @@ public class BigDroneAI : MonoBehaviour
             {
                 isStunned = false;
                 agent.isStopped = false;
+
                 if (!isActivated)
                 {
                     currentState = DroneState.Deactivated;
+                    ChangeAmbientSound(droneSound);
                 }
                 else
                 {
                     currentState = DroneState.Pursuing;
+                    ChangeAmbientSound(alarmSound);
                 }
             }
             return;
@@ -269,9 +272,13 @@ public class BigDroneAI : MonoBehaviour
     }
     void Shoot()
     {
-        // shoot a laser towards the player
+        // Only fire if the player is inside the vision cone
+        if (!InVisionCone())
+        {
+            return;
+        }
+
         Vector3 directionToPlayer = player.position - eyePoint.position;
-        Quaternion rotation = Quaternion.LookRotation(directionToPlayer.normalized);
         drone_shooter.ShootLaser(directionToPlayer, eyePoint.position);
         audioSource.PlayOneShot(shootSound);
     }
@@ -319,9 +326,8 @@ public class BigDroneAI : MonoBehaviour
         hoverPosition.y = hover_height;
         transform.position = hoverPosition;
 
-        // Move along Z axis toward the player before switching to pursuit.
+        // Move along Z axis toward the player before switching to pursuit
         activation_move_timer += Time.deltaTime;
-
         if (activation_move_timer < activation_move_time)
         {
             if (audioSource2.clip != alarmSound)
@@ -337,7 +343,6 @@ public class BigDroneAI : MonoBehaviour
 
             float zDelta = activation_move_speed * Time.deltaTime;
             float maxMove = Mathf.Min(zDelta, Mathf.Abs(activation_z_target - transform.position.z));
-
             Vector3 rayDirection = direction > 0f ? Vector3.forward : Vector3.back;
             RaycastHit hit;
             if (Physics.Raycast(transform.position + Vector3.up * 0.25f, rayDirection, out hit, maxMove + 0.2f, drone_shooter != null ? drone_shooter.collision_mask : default))
@@ -353,46 +358,48 @@ public class BigDroneAI : MonoBehaviour
             return;
         }
 
-        transform.position = new Vector3(transform.position.x, hover_height, activation_z_target);
-
         attack_delay_timer = 0f;
         attack_time = Time.time;
-
         agent.isStopped = false;
         agent.speed = patrol_speed;
-
         currentState = DroneState.Pursuing;
     }
 
     void PermanentPursuit()
     {
+        if (agent != null)
+        {
+            agent.isStopped = false;
+
+            Vector3 targetPos = player.position;
+            targetPos.y = transform.position.y;
+            agent.SetDestination(targetPos);
+        }
+
         // Hover at current height
         Vector3 hoverPosition = transform.position;
         hoverPosition.y = hover_height;
         transform.position = hoverPosition;
 
-        // Use NavMesh pathing so the drone can route around walls when following the player.
-        if (agent != null)
-        {
-            agent.isStopped = false;
-            agent.speed = patrol_speed;
-            agent.SetDestination(player.position);
-        }
-
         // Always face the player
         Vector3 directionToPlayer = player.position - transform.position;
         directionToPlayer.y = 0;
-        Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
 
-        // Continuously shoot at the player
+        if (directionToPlayer != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                targetRotation,
+                Time.deltaTime * 5f);
+        }
+
         if (attack_delay_timer < attack_delay)
         {
             attack_delay_timer += Time.deltaTime;
             return;
         }
-
-        if (Time.time >= attack_time)
+        if (InVisionCone() && Time.time >= attack_time)
         {
             Shoot();
             attack_time = Time.time + attack_speed;
