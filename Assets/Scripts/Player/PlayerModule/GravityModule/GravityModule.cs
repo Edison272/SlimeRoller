@@ -63,7 +63,7 @@ public class GravityModule : PlayerModule
             if (obj.CompareTag("Bullet"))
             {
                 
-                obj.transform.parent.GetComponent<LaserBolt>().speed /= 1.2f;
+                obj.transform.parent.GetComponent<LaserBolt>().speed /= 1f;
             }
         }
 

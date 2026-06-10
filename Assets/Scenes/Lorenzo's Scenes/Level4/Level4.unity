@@ -18330,6 +18330,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1810340937}
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: rollSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a2a25dad4e55c24f965711d1282ac49, type: 3}
+    - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1802951704}
