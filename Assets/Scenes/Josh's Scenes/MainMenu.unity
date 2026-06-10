@@ -209,8 +209,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 68
+  m_fontSizeBase: 68
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6495,17 +6495,23 @@ MonoBehaviour:
 
     Music:
 
-    Irving
-    Heat - Stealth Music Beats
+    -
+    Irving Heat - Stealth Music Beats
 
-    FilFar - Bitrack
+    - FilFar - Bitrack
 
     Assets:
 
-    FireBolt Studios
-    - Sci-Fi Texture Pack 1
+    -
+    FireBolt Studios - Sci-Fi Texture Pack 1
 
-    G.Forge - Sci-Fi Interior Modular Kit'
+    - G.Forge - Sci-Fi Interior Modular
+    Kit
+
+    - VoodooPlay - Low Poly Combat Drone
+
+    - AK STUDIO ARt - Surveillance
+    Camera'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6508e8fddbfada447848152d862520c5, type: 2}
   m_sharedMaterial: {fileID: -3947777771614084777, guid: 6508e8fddbfada447848152d862520c5, type: 2}
@@ -6532,8 +6538,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 68
+  m_fontSizeBase: 68
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
