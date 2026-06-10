@@ -12234,6 +12234,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ef69d58b5c5950040aecef367c3bbd85, type: 2}
     - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1802951704}
+    - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: main_camera
       value: 
       objectReference: {fileID: 623688320}
@@ -12286,6 +12290,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c39a907507b27d54488310526d056155, type: 3}
+--- !u!82 &1802951704 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7589071401752501234, guid: c39a907507b27d54488310526d056155, type: 3}
+  m_PrefabInstance: {fileID: 1802951703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1810340931
 GameObject:
   m_ObjectHideFlags: 0

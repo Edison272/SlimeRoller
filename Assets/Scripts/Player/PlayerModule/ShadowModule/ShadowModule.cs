@@ -32,7 +32,7 @@ public class ShadowModule : PlayerModule
     {
         base_data = (ShadowModuleSO)base_data_so;
         base_data.SetPlayerStats(player);
-
+        
         cooldownTime = base_data.cooldownTime;
         activeDuration = base_data.activeDuration;
         timeSinceUse = cooldownTime;
@@ -68,7 +68,7 @@ public class ShadowModule : PlayerModule
     public override void OnDeactivate()
     {
         base.OnDeactivate();
-
+        
         ReleaseModule(default);
         DestroyProjector();
     }

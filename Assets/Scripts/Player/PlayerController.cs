@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
     public bool on_ground { get; private set; } = false;
 
     public AudioSource audioSource;
+    public AudioClip rollSound;
 
     void Awake()
     {
@@ -101,6 +102,24 @@ public class PlayerController : MonoBehaviour
         }
 
         active_module.UpdateModule();
+        
+        // if (player_rb.linearVelocity != Vector3.zero)
+        // {
+        //     if(!audioSource.isPlaying)
+        //     {
+        //         audioSource.clip = rollSound;
+        //         audioSource.loop = true;
+        //         audioSource.spatialBlend = 1f;
+        //         audioSource.Play();
+        //     }
+        // }
+        // else
+        // {
+        //     if(!audioSource.isPlaying)
+        //     {
+        //         audioSource.Stop();
+        //     }
+        // }
     }
 
     // allow external objects (pickups, etc.) to switch the player's active module
