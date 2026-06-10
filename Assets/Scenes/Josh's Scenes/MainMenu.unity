@@ -1905,6 +1905,14 @@ PrefabInstance:
       propertyPath: player_rb
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: loopSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088309084441408247, guid: c39a907507b27d54488310526d056155, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8550802063414007684, guid: c39a907507b27d54488310526d056155, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3137,7 +3145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   musicSource: {fileID: 236270552}
-  menuTheme: {fileID: 0}
+  menuTheme: {fileID: 8300000, guid: 90e4c07b93ca1ff408d3dace1aed5311, type: 3}
   gameTheme: {fileID: 8300000, guid: a96bbb5cb44e90b4da0da6dbfa85663b, type: 3}
 --- !u!1001 &1191321996
 PrefabInstance:

@@ -5780,4 +5780,5 @@ MonoBehaviour:
   - {fileID: 5088660447118107153}
   starting_module: {fileID: 11400000, guid: ef69d58b5c5950040aecef367c3bbd85, type: 2}
   audioSource: {fileID: 7589071401752501234}
-  loopSource: {fileID: 0}
+  loopSource: {fileID: 886988971760505762}
+  death: {fileID: 8300000, guid: 18bcf429b261a5e4296805dbfba495a4, type: 3}
