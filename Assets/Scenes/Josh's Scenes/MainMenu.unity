@@ -3908,7 +3908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Project
+  m_text: 'Project:
 
     Slime Roller'
   m_isRightToLeft: 0
