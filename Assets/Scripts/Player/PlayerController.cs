@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour
     // Camera Control
     public Camera main_camera;
     public CinemachineCamera free_cam;
+    public CinemachineCamera fps_cam;
+    float _cameraScroll = 0;
+    [SerializeField] float CameraRadius = 5;
+    [SerializeField] float MaxScrollUp = 0.1f;
 
     // Movement values
     Vector2 move_dir = Vector2.zero;
@@ -25,7 +29,7 @@ public class PlayerController : MonoBehaviour
     private LayerMask ground_check_mask = 1 << 6;
 
     // Looking values
-    Vector3 cam_look_dir = Vector3.zero;
+    public Vector3 cam_look_dir = Vector3.zero;
     float body_rotate_speed = 7;
     Vector3 true_look_dir = Vector3.right;
 
@@ -80,6 +84,10 @@ public class PlayerController : MonoBehaviour
         curr_speed = base_speed;
 
         true_look_dir = SlimeCore.transform.forward;
+
+        free_cam.transform.gameObject.SetActive(true);
+        fps_cam.transform.gameObject.SetActive(false);
+        _cameraScroll = 0;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -96,8 +104,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // move player to face camera direction
-        Vector3 cam_xz_pos = new Vector3(free_cam.transform.position.x, transform.position.y, free_cam.transform.position.z);
-        cam_look_dir = (transform.position - cam_xz_pos).normalized;
+        if (free_cam.transform.gameObject.activeSelf)
+        {
+            Vector3 cam_xz_pos = new Vector3(free_cam.transform.position.x, transform.position.y, free_cam.transform.position.z);
+            cam_look_dir = (transform.position - cam_xz_pos).normalized;
+        }
+        else if (fps_cam.transform.gameObject.activeSelf)
+        {
+            float player_rot = fps_cam.transform.rotation.eulerAngles.y;
+            cam_look_dir = new Vector3(Mathf.Sin(player_rot * Mathf.Deg2Rad), 0, Mathf.Cos(player_rot * Mathf.Deg2Rad)).normalized;
+        }
+
 
         // rotate inner core to face the movement direction
         if (move_dir != Vector2.zero)
@@ -194,6 +211,23 @@ public class PlayerController : MonoBehaviour
     {
         //active_module.UseModule(action);
     }
+
+    void OnCameraScroll(InputValue action)
+    {
+        _cameraScroll = Mathf.Clamp(_cameraScroll + action.Get<Vector2>().y * Time.deltaTime, 0, MaxScrollUp);
+        if (_cameraScroll == MaxScrollUp)
+        {
+            free_cam.transform.gameObject.SetActive(false);
+            fps_cam.transform.gameObject.SetActive(true);
+        }
+        else
+        {
+            free_cam.GetComponent<CinemachineOrbitalFollow>().Radius = CameraRadius * 0.5f + CameraRadius * 0.5f * (1f - _cameraScroll/MaxScrollUp);
+            free_cam.transform.gameObject.SetActive(true);
+            fps_cam.transform.gameObject.SetActive(false);
+        }
+    }
+
     // hide anypart of the player which is visible
     void ToggleVFX(bool is_on)
     {

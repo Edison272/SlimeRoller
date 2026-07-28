@@ -44,7 +44,7 @@ public class LaserBolt : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerController>().OnDeath();
+            other.GetComponent<PlayerController>()?.OnDeath();
         }
         
         Destroy(gameObject);
